@@ -24,11 +24,11 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> role = new HashSet<>();
 
-    //private UserDetails userDetails;
+    private UserDetails userDetails;
 
     private List<Movie> movies;
-   // private List<Book> books;
-    //private List<Game> games;
+    private List<Book> books;
+    private List<Game> games;
 
     @PrePersist
     public void prePersist() {
