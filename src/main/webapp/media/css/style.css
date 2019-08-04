@@ -1,0 +1,19 @@
+.page-header{
+    background-color: crimson;
+    position: absolute;
+    left: 0px;
+    margin-left: 0px;
+    width: 100%;
+    min-width: 980px;
+    top: 0px;
+    height: 108px;
+}
+
+.logoText{
+    color: black;
+    font-size: 30px;
+    position: center;
+    text-align: center;
+    padding-top: 17px;
+}
+
