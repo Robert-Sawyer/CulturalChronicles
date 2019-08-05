@@ -2,6 +2,92 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <header class="page-header">
+    <div class="header-container">
+        <div class="logo logo-container">
+            <a class="header-logo" href="/" title="Cultural Chronicles - MoGaBo">
+                <div id="main-Logo">
+                    <p class="logoText">CulturalChronicles (MoGaBo)</p>
+                </div>
+            </a>
+        </div>
+        <div class="header-wrap">
+            <div class="search-Main">
+                <form id="search-form">
+                    <fieldset>
+                        <input id="input-search-main" class="form-input" placeholder="Szukaj filmów, gier, lub książek">
+                        <button class="search-button">
+
+                        </button>
+                    </fieldset>
+                </form>
+                <div id="search-results">
+
+                </div>
+            </div>
+            <div class="user-main-corner">
+                <div class="main-menu">
+                    <div id="mainMenuWrapper" data-loginlink="/login" data-redir="/fbc/entryPoint?_login_redirect_url=">
+                        <div id="userHeader" class="visible">
+                            <div class="userHeaderTop">
+                                <div id="userHeaderButton">
+                                    <a href="/user/Robert_Sawyer" class="user-profile__wrapper">
+                            <span class="user__avatar ">
+                                <img src="https://1.fwcdn.pl/u/44/35/1974435/1974435.2.jpg"
+                                     alt="Robert Sawyer - avatar">
+                            </span>
+
+                                        <div class="user__profile__wrapper">
+                                <span class="user__name-wrap">
+                                    <span class="user__name">Robert Sawyer</span>
+                                </span>
+                                        </div>
+                                    </a>
+
+                                    <span id="userMenuToggle" class="user-menu_toggle">
+                            <i class="ico ico--arrowDown"></i>
+                            <span id="userCounter" class="user-menu_toggle__notifications hide"></span>
+                        </span>
+                                    <div id="userMenu">
+                                        <ul class="list">
+                                            <li class="item-user item-extra">
+                                                <div class="user-extra">
+                                                    <ul class="list list__display--inline">
+                                                        <li class="item">
+                                                            <button class="user-extra-button" id="assistantOpener"
+                                                                    href="#">ASYSTENT
+                                                            </button>
+                                                            <span class="badge badge__primary hidden-md-down hide"
+                                                                  id="assistantCounter"></span></li>
+                                                        <li class="item">
+                                                            <button class="user-extra-button" id="notificatonsOpener"
+                                                                    href="#">POWIADOMIENIA
+                                                            </button>
+                                                            <span class="badge badge__primary hidden-md-down hide"
+                                                                  id="notificationsCounter"></span></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+
+                                            <li class="item-user"><a id="ga_AssistantMail"
+                                                                     href="/messages">POCZTA</a><span
+                                                    class="badge badge__primary hidden-md-down hide"
+                                                    id="messagesCounter"></span></li>
+                                            <li class="item-user"><a id="ga_AssistantSettings" href="/settings">USTAWIENIA</a>
+                                            </li>
+                                            <li class="item-user"><a id="ga_AssistantLogout" href="/logout">WYLOGUJ</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<header>
     <nav class="header-nav-mainlogoContent">
         <a href="/" class="navbar-brand main-logo">
             <div id="mainLogo">
@@ -21,7 +107,8 @@
                         <a class="nav-link color-header" href='<c:url value="/login" />'>Logowanie</a>
                     </li>
                     <li class="nav-item ml-4">
-                        <a class="nav-link color-header" href='<c:url value="/register" />'>Rejestracja</a>
+                        <a class="nav-link color-header"
+                           href='<c:url value="/register" />'>Rejestracja</a>
                     </li>
                 </sec:authorize>
                 <sec:authorize access="isAuthenticated()">
