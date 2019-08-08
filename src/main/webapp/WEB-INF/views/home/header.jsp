@@ -167,7 +167,7 @@
                                 </ul>
                             </div>
                         </li>
-                        
+
                         <li class="menu-bottom-appguide menu-bottom-item">
                             <a href="/cockpite">
                                 <span>PRZEWODNIK PO SERWISIE</span>
