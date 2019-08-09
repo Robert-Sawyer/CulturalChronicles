@@ -24,7 +24,21 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 <div class="pageContainer">
-   
+    <div class="news-personalize">
+
+    </div>
+
+    <div class="repertoire">
+
+    </div>
+
+    <div class="friends-activity">
+
+    </div>
+
+    <div class="new-reviews">
+
+    </div>
 </div>
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
