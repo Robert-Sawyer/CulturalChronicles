@@ -22,6 +22,41 @@
 <body>
 <jsp:include page="../home/header.jsp"></jsp:include>
 
+<div class="page-container">
+
+    <div class="username-container">
+
+    </div>
+
+    <div class="personal-user-menu">
+
+    </div>
+
+    <div class="main-page-container">
+        <div class="left-side-panel">
+            <div class="profile-avatar">
+
+            </div>
+
+            <div class="since-when">
+
+            </div>
+
+            <div class="friends">
+
+            </div>
+        </div>
+
+        <div class="last-rated">
+
+        </div>
+
+        <div class="highest-rates">
+
+        </div>
+    </div>
+</div>
+
 <jsp:include page="../home/footer.jsp"></jsp:include>
 </body>
 </html>
