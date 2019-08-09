@@ -18,7 +18,7 @@
                             <input id="input-search-main" class="form-input"
                                    placeholder="Szukaj filmów, gier, lub książek">
                             <button class="search-button">
-
+<%--                            TODO wstawić ikonę wyszukiwania--%>
                             </button>
                         </fieldset>
                     </form>
