@@ -3,177 +3,180 @@
 
 <header class="page-header">
     <div class="header-container">
-        <div class="header-top">
-            <div class="logo logo-container">
-                <a class="header-logo" href="/" title="Cultural Chronicles - MoGaBo">
-                    <div id="main-Logo">
-                        <p class="logoText">CulturalChronicles (MoGaBo)</p>
-                    </div>
-                </a>
-            </div>
-            <div class="header-wrap">
-                <div class="search-Main">
-                    <form id="search-form">
-                        <fieldset>
-                            <input id="input-search-main" class="form-input"
-                                   placeholder="Szukaj filmów, gier, lub książek">
-                            <button class="search-button">
-<%--                            TODO wstawić ikonę wyszukiwania--%>
-                            </button>
-                        </fieldset>
-                    </form>
-                    <div id="search-results">
-
-                    </div>
+        <div class="header-main-panel">
+            <div class="header-top">
+                <div class="logo logo-container">
+                    <a class="header-logo" href="/" title="Cultural Chronicles - MoGaBo">
+                        <div id="main-Logo">
+                            <p class="logoText">CulturalChronicles (MoGaBo)</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="user-main-corner">
-                    <div class="main-menu">
-                        <div id="mainMenuWrapper" data-loginlink="/login"
-                             data-redir="/fbc/entryPoint?_login_redirect_url=">
-                            <div id="userHeader" class="visible">
-                                <div class="userHeaderTop">
-                                    <div id="userHeaderButton">
-                                        <a href="/user/Robert_Sawyer" class="user-profile__wrapper">
+                <div class="header-wrap">
+                    <div class="search-Main">
+                        <form id="search-form">
+                            <fieldset>
+                                <input id="input-search-main" class="form-input"
+                                       placeholder="Szukaj filmów, gier, lub książek">
+                                <button class="search-button">
+                                    <%--                            TODO wstawić ikonę wyszukiwania--%>
+                                </button>
+                            </fieldset>
+                        </form>
+                        <div id="search-results">
+
+                        </div>
+                    </div>
+                    <div class="user-main-corner">
+                        <div class="main-menu">
+                            <div id="mainMenuWrapper" data-loginlink="/login"
+                                 data-redir="/fbc/entryPoint?_login_redirect_url=">
+                                <div id="userHeader" class="visible">
+                                    <div class="userHeaderTop">
+                                        <div id="userHeaderButton">
+                                            <a href="/user/Robert_Sawyer" class="user-profile__wrapper">
                             <span class="user__avatar ">
                                 <img src="https://1.fwcdn.pl/u/44/35/1974435/1974435.2.jpg"
                                      alt="Robert Sawyer - avatar">
                             </span>
 
-                                            <div class="user__profile__wrapper">
+                                                <div class="user__profile__wrapper">
                                 <span class="user__name-wrap">
                                     <span class="user__name">Robert Sawyer</span>
                                 </span>
-                                            </div>
-                                        </a>
+                                                </div>
+                                            </a>
 
-                                        <span id="userMenuToggle" class="user-menu_toggle">
+                                            <span id="userMenuToggle" class="user-menu_toggle">
                             <i class="ico ico--arrowDown"></i>
                             <span id="userCounter" class="user-menu_toggle__notifications hide"></span>
                         </span>
-                                        <div id="userMenu">
-                                            <ul class="list">
-                                                <li class="item-user item-extra">
-                                                    <div class="user-extra">
-                                                        <ul class="list list__display--inline">
-                                                            <li class="item">
-                                                                <button class="user-extra-button" id="assistantOpener"
-                                                                        href="#">ASYSTENT
-                                                                </button>
-                                                                <span class="badge badge__primary hidden-md-down hide"
-                                                                      id="assistantCounter"></span></li>
-                                                            <li class="item">
-                                                                <button class="user-extra-button"
-                                                                        id="notificatonsOpener"
-                                                                        href="#">POWIADOMIENIA
-                                                                </button>
-                                                                <span class="badge badge__primary hidden-md-down hide"
-                                                                      id="notificationsCounter"></span></li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
+                                            <div id="userMenu">
+                                                <ul class="list">
+                                                    <li class="item-user item-extra">
+                                                        <div class="user-extra">
+                                                            <ul class="list list__display--inline">
+                                                                <li class="item">
+                                                                    <button class="user-extra-button"
+                                                                            id="assistantOpener"
+                                                                            href="#">ASYSTENT
+                                                                    </button>
+                                                                    <span class="badge badge__primary hidden-md-down hide"
+                                                                          id="assistantCounter"></span></li>
+                                                                <li class="item">
+                                                                    <button class="user-extra-button"
+                                                                            id="notificatonsOpener"
+                                                                            href="#">POWIADOMIENIA
+                                                                    </button>
+                                                                    <span class="badge badge__primary hidden-md-down hide"
+                                                                          id="notificationsCounter"></span></li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
 
-                                                <li class="item-user"><a id="ga_AssistantMail"
-                                                                         href="/messages">POCZTA</a><span
-                                                        class="badge badge__primary hidden-md-down hide"
-                                                        id="messagesCounter"></span></li>
-                                                <li class="item-user"><a id="ga_AssistantSettings" href="/settings">USTAWIENIA</a>
-                                                </li>
-                                                <li class="item-user"><a id="ga_AssistantLogout"
-                                                                         href="/logout">WYLOGUJ</a>
-                                                </li>
-                                            </ul>
+                                                    <li class="item-user"><a id="ga_AssistantMail"
+                                                                             href="/messages">POCZTA</a><span
+                                                            class="badge badge__primary hidden-md-down hide"
+                                                            id="messagesCounter"></span></li>
+                                                    <li class="item-user"><a id="ga_AssistantSettings" href="/settings">USTAWIENIA</a>
+                                                    </li>
+                                                    <li class="item-user"><a id="ga_AssistantLogout"
+                                                                             href="/logout">WYLOGUJ</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="header-bottom">
-                    <ul class="menu-bottom-list">
-                        <li class="menu-bottom-homepage menu-bottom-item">
-                            <a href="/"></a>
-                        </li>
+                    <div class="header-bottom">
+                        <ul class="menu-bottom-list">
+                            <li class="menu-bottom-homepage menu-bottom-item">
+                                <a href="/"></a>
+                            </li>
 
-                        <li class="menu-bottom-cockpite menu-bottom-item">
-                            <a href="/cockpite">
-                                <span>KOKPIT</span>
-                            </a>
-                        </li>
+                            <li class="menu-bottom-cockpite menu-bottom-item">
+                                <a href="/cockpite">
+                                    <span>KOKPIT</span>
+                                </a>
+                            </li>
 
-                        <li class="menu-bottom-base menu-bottom-item">
-                            <a href="/base">
-                                <span>BAZA</span>
-                            </a>
-                            <div class="header-bottom-submenu">
-                                <ul class="submenu-items">
-                                    <li class="menu-submenu-item sumbenu-bottom-movies"></li>
-                                    <li class="menu-submenu-item sumbenu-bottom-filmmakers"></li>
-                                    <li class="menu-submenu-item sumbenu-bottom-games"></li>
-                                    <li class="menu-submenu-item sumbenu-bottom-gamemakers"></li>
-                                    <li class="menu-submenu-item sumbenu-bottom-books"></li>
-                                    <li class="menu-submenu-item sumbenu-bottom-bookscreators"></li>
-                                </ul>
-                            </div>
-                        </li>
+                            <li class="menu-bottom-base menu-bottom-item">
+                                <a href="/base">
+                                    <span>BAZA</span>
+                                </a>
+                                <div class="header-bottom-submenu">
+                                    <ul class="submenu-items">
+                                        <li class="menu-submenu-item sumbenu-bottom-movies"></li>
+                                        <li class="menu-submenu-item sumbenu-bottom-filmmakers"></li>
+                                        <li class="menu-submenu-item sumbenu-bottom-games"></li>
+                                        <li class="menu-submenu-item sumbenu-bottom-gamemakers"></li>
+                                        <li class="menu-submenu-item sumbenu-bottom-books"></li>
+                                        <li class="menu-submenu-item sumbenu-bottom-bookscreators"></li>
+                                    </ul>
+                                </div>
+                            </li>
 
-                        <li class="menu-bottom-society menu-bottom-item">
-                            <a href="/base">
-                                <span>SPOŁECZNOŚĆ</span>
-                            </a>
-                            <div class="header-bottom-submenu">
-                                <ul class="submenu-items">
-                                    <li class="menu-submenu-item sumbenu-bottom-movies"></li>
+                            <li class="menu-bottom-society menu-bottom-item">
+                                <a href="/base">
+                                    <span>SPOŁECZNOŚĆ</span>
+                                </a>
+                                <div class="header-bottom-submenu">
+                                    <ul class="submenu-items">
+                                        <li class="menu-submenu-item sumbenu-bottom-movies"></li>
 
-                                </ul>
-                            </div>
-                        </li>
+                                    </ul>
+                                </div>
+                            </li>
 
-                        <li class="menu-bottom-multimedia menu-bottom-item">
-                            <a href="/base">
-                                <span>MULTIMEDIA</span>
-                            </a>
-                            <div class="header-bottom-submenu">
-                                <ul class="submenu-items">
-                                    <li class="menu-submenu-item sumbenu-bottom-movies"></li>
-                                </ul>
-                            </div>
-                        </li>
+                            <li class="menu-bottom-multimedia menu-bottom-item">
+                                <a href="/base">
+                                    <span>MULTIMEDIA</span>
+                                </a>
+                                <div class="header-bottom-submenu">
+                                    <ul class="submenu-items">
+                                        <li class="menu-submenu-item sumbenu-bottom-movies"></li>
+                                    </ul>
+                                </div>
+                            </li>
 
-                        <li class="menu-bottom-news menu-bottom-item">
-                            <a href="/cockpite">
-                                <span>NEWSY</span>
-                            </a>
-                        </li>
+                            <li class="menu-bottom-news menu-bottom-item">
+                                <a href="/cockpite">
+                                    <span>NEWSY</span>
+                                </a>
+                            </li>
 
-                        <li class="menu-bottom-add-element menu-bottom-item">
-                            <a href="/base">
-                                <span>DODAJ DO BAZY</span>
-                            </a>
-                            <div class="header-bottom-submenu">
-                                <ul class="submenu-items">
-                                    <li class="menu-submenu-item sumbenu-bottom-movies"></li>
-                                </ul>
-                            </div>
-                        </li>
+                            <li class="menu-bottom-add-element menu-bottom-item">
+                                <a href="/base">
+                                    <span>DODAJ DO BAZY</span>
+                                </a>
+                                <div class="header-bottom-submenu">
+                                    <ul class="submenu-items">
+                                        <li class="menu-submenu-item sumbenu-bottom-movies"></li>
+                                    </ul>
+                                </div>
+                            </li>
 
-                        <li class="menu-bottom-adapt-content menu-bottom-item">
-                            <a href="/base">
-                                <span>DOPASUJ TREŚĆ</span>
-                            </a>
-                            <div class="header-bottom-submenu">
-                                <ul class="submenu-items">
-                                    <li class="menu-submenu-item sumbenu-bottom-movies"></li>
-                                </ul>
-                            </div>
-                        </li>
+                            <li class="menu-bottom-adapt-content menu-bottom-item">
+                                <a href="/base">
+                                    <span>DOPASUJ TREŚĆ</span>
+                                </a>
+                                <div class="header-bottom-submenu">
+                                    <ul class="submenu-items">
+                                        <li class="menu-submenu-item sumbenu-bottom-movies"></li>
+                                    </ul>
+                                </div>
+                            </li>
 
-                        <li class="menu-bottom-appguide menu-bottom-item">
-                            <a href="/cockpite">
-                                <span>PRZEWODNIK PO SERWISIE</span>
-                            </a>
-                        </li>
-                    </ul>
+                            <li class="menu-bottom-appguide menu-bottom-item">
+                                <a href="/cockpite">
+                                    <span>PRZEWODNIK PO SERWISIE</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
