@@ -6,11 +6,34 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
 
-</body>
-</html>
+<section class="news-section">
+
+    <div class="news-box">
+        <div class="main-news-container">
+
+        </div>
+
+        <div class="top-news-midbox">
+            <div class="left-top-midbox-contaner">
+
+            </div>
+
+            <div class="right-top-midbox-container">
+
+            </div>
+        </div>
+
+        <div class="bottom-news-midbox">
+            <div class="left-bottom-midbox-contaner">
+
+            </div>
+
+            <div class="right-bottom-midbox-container">
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
