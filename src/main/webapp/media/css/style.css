@@ -2,39 +2,57 @@
 
 /*---HEADER---*/
 
-.page-header{
-    background-color: crimson;
+.page-header {
+    background-color: black;
     position: absolute;
     left: 0px;
     margin-left: 0px;
     width: 100%;
     min-width: 980px;
     top: 0px;
-    height: 108px;
+    height: 130px;
 }
-.header-container{
+
+.header-top{
     width: 100%;
-    left: 0px;
+    margin-left: 0;
+    margin-right: 0;
+    top: 0;
+    height: 90px;
 }
 
-.header-main-panel{
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
-    background-color: black;
+.logo-container{
+    margin-left: 0;
+    width: 17%;
+    position: absolute;
 }
 
-.logoText{
+.logoText {
     color: white;
-    font-size: 30px;
-    position: center;
+    padding-left: 20px;
+    font-size: 20px;
     text-align: center;
     padding-top: 17px;
 }
 
+.search-container{
+    margin-left: 17%;
+    margin-right: 17%;
+    height: 90px;
+}
+
+.header-bottom {
+    width: 70%;
+    top: 90px;
+    height: 40px;
+    margin-left: 17%;
+    margin-right: 17%;
+    background-color: black;
+}
+
 /*---PAGE CONTENT---*/
 
-.pageContainer{
+.pageContainer {
     left: 0px;
     background-color: red;
     margin-left: 0px;
@@ -45,6 +63,101 @@
     height: 100%;
 }
 
+.page-content{
+    background-color: black;
+    align-content: center;
+    margin-left: 17%;
+    margin-right: 17%;
+}
+
 
 /*---FOOTER---*/
 
+#footer-section {
+    margin: 0;
+    margin-left: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: 0 0;
+    bottom: auto;
+
+    /*bottom: 0;*/
+    left: 0;
+    width: 100%;
+    min-width: 980px;
+    position: absolute;
+    top: 927px;
+    height: 77px;
+}
+
+.footer-background {
+    left: 0;
+    width: 100%;
+}
+
+.footer-background-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    border-top: 0px solid rgba(0, 0, 0, 1);
+    border-bottom: 0px solid rgba(0, 0, 0, 1);
+}
+
+footer-centered-content {
+    width: 100%;
+}
+
+.footer-inline-content {
+    position: absolute;
+    top: 0;
+    right: 200px;
+    bottom: 0;
+    left: 200px;
+}
+
+#LnkBr2 {
+    margin-left: calc((100% - 980px) * 0.5);
+}
+
+.lblitemsContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+}
+
+#LnkBr2itemsContainer {
+    list-style: none;
+}
+
+.lbimageItem {
+    width: 21px;
+    height: 21px;
+    margin-bottom: 0;
+    margin-right: 13px;
+    display: inline-block;
+}
+
+.imageItemlink {
+    cursor: pointer;
+}
+
+#copyright {
+    left: 600px;
+    top: 29px;
+    position: absolute;
+    height: 25px;
+}
+
+.cpr {
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: left;
+}
