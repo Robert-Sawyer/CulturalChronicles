@@ -2,32 +2,126 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
-<header class="page-header">
-    <div class="header-container">
+<header>
+    <div class="page-header">
+        <div class="header-top">
+            <div class="logo-container">
+                <a class="header-logo" href="/" title="Cultural Chronicles - MoGaBo">
+                    <div id="main-Logo">
+                        <p class="logoText">CulturalChronicles <br>(MoGaBo)</p>
+                    </div>
+                </a>
+            </div>
+            <div class="search-container">
+                <div class="search-Main">
+                    <form id="search-form">
+                        <fieldset>
+                            <input id="input-search-main" class="form-input"
+                                   placeholder="Szukaj filmów, gier, lub książek">
+                            <button class="search-button">
+                                <%--                            TODO wstawić ikonę wyszukiwania--%>
+                            </button>
+                        </fieldset>
+                    </form>
+                    <div id="search-results">
+
+                    </div>
+                </div>
+            </div>
+            <div class="user-header-panel">
+
+            </div>
+        </div>
+        <div class="header-bottom">
+            <ul class="menu-bottom-list">
+                <li class="menu-bottom-homepage menu-bottom-item">
+                    <a href="/"></a>
+                </li>
+
+                <li class="menu-bottom-cockpite menu-bottom-item">
+                    <a href="/cockpite">
+                        <span>KOKPIT</span>
+                    </a>
+                </li>
+
+                <li class="menu-bottom-base menu-bottom-item">
+                    <a href="/base">
+                        <span>BAZA</span>
+                    </a>
+                    <div class="header-bottom-submenu">
+                        <ul class="submenu-items">
+                            <li class="menu-submenu-item sumbenu-bottom-movies"></li>
+                            <li class="menu-submenu-item sumbenu-bottom-filmmakers"></li>
+                            <li class="menu-submenu-item sumbenu-bottom-games"></li>
+                            <li class="menu-submenu-item sumbenu-bottom-gamemakers"></li>
+                            <li class="menu-submenu-item sumbenu-bottom-books"></li>
+                            <li class="menu-submenu-item sumbenu-bottom-bookscreators"></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu-bottom-society menu-bottom-item">
+                    <a href="/base">
+                        <span>SPOŁECZNOŚĆ</span>
+                    </a>
+                    <div class="header-bottom-submenu">
+                        <ul class="submenu-items">
+                            <li class="menu-submenu-item sumbenu-bottom-movies"></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu-bottom-multimedia menu-bottom-item">
+                    <a href="/base">
+                        <span>MULTIMEDIA</span>
+                    </a>
+                    <div class="header-bottom-submenu">
+                        <ul class="submenu-items">
+                            <li class="menu-submenu-item sumbenu-bottom-movies"></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu-bottom-news menu-bottom-item">
+                    <a href="/cockpite">
+                        <span>NEWSY</span>
+                    </a>
+                </li>
+
+                <li class="menu-bottom-add-element menu-bottom-item">
+                    <a href="/base">
+                        <span>DODAJ DO BAZY</span>
+                    </a>
+                    <div class="header-bottom-submenu">
+                        <ul class="submenu-items">
+                            <li class="menu-submenu-item sumbenu-bottom-movies"></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu-bottom-adapt-content menu-bottom-item">
+                    <a href="/base">
+                        <span>DOPASUJ TREŚĆ</span>
+                    </a>
+                    <div class="header-bottom-submenu">
+                        <ul class="submenu-items">
+                            <li class="menu-submenu-item sumbenu-bottom-movies"></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu-bottom-appguide menu-bottom-item">
+                    <a href="/cockpite">
+                        <span>PRZEWODNIK PO SERWISIE</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
         <div class="header-main-panel">
             <div class="header-top">
-                <div class="logo logo-container">
-                    <a class="header-logo" href="/" title="Cultural Chronicles - MoGaBo">
-                        <div id="main-Logo">
-                            <p class="logoText">CulturalChronicles (MoGaBo)</p>
-                        </div>
-                    </a>
-                </div>
                 <div class="header-wrap">
-                    <div class="search-Main">
-                        <form id="search-form">
-                            <fieldset>
-                                <input id="input-search-main" class="form-input"
-                                       placeholder="Szukaj filmów, gier, lub książek">
-                                <button class="search-button">
-                                    <%--                            TODO wstawić ikonę wyszukiwania--%>
-                                </button>
-                            </fieldset>
-                        </form>
-                        <div id="search-results">
-
-                        </div>
-                    </div>
                     <div class="user-main-corner">
                         <div class="main-menu">
                             <div id="mainMenuWrapper" data-loginlink="/login"
@@ -91,92 +185,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="header-bottom">
-                        <ul class="menu-bottom-list">
-                            <li class="menu-bottom-homepage menu-bottom-item">
-                                <a href="/"></a>
-                            </li>
-
-                            <li class="menu-bottom-cockpite menu-bottom-item">
-                                <a href="/cockpite">
-                                    <span>KOKPIT</span>
-                                </a>
-                            </li>
-
-                            <li class="menu-bottom-base menu-bottom-item">
-                                <a href="/base">
-                                    <span>BAZA</span>
-                                </a>
-                                <div class="header-bottom-submenu">
-                                    <ul class="submenu-items">
-                                        <li class="menu-submenu-item sumbenu-bottom-movies"></li>
-                                        <li class="menu-submenu-item sumbenu-bottom-filmmakers"></li>
-                                        <li class="menu-submenu-item sumbenu-bottom-games"></li>
-                                        <li class="menu-submenu-item sumbenu-bottom-gamemakers"></li>
-                                        <li class="menu-submenu-item sumbenu-bottom-books"></li>
-                                        <li class="menu-submenu-item sumbenu-bottom-bookscreators"></li>
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li class="menu-bottom-society menu-bottom-item">
-                                <a href="/base">
-                                    <span>SPOŁECZNOŚĆ</span>
-                                </a>
-                                <div class="header-bottom-submenu">
-                                    <ul class="submenu-items">
-                                        <li class="menu-submenu-item sumbenu-bottom-movies"></li>
-
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li class="menu-bottom-multimedia menu-bottom-item">
-                                <a href="/base">
-                                    <span>MULTIMEDIA</span>
-                                </a>
-                                <div class="header-bottom-submenu">
-                                    <ul class="submenu-items">
-                                        <li class="menu-submenu-item sumbenu-bottom-movies"></li>
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li class="menu-bottom-news menu-bottom-item">
-                                <a href="/cockpite">
-                                    <span>NEWSY</span>
-                                </a>
-                            </li>
-
-                            <li class="menu-bottom-add-element menu-bottom-item">
-                                <a href="/base">
-                                    <span>DODAJ DO BAZY</span>
-                                </a>
-                                <div class="header-bottom-submenu">
-                                    <ul class="submenu-items">
-                                        <li class="menu-submenu-item sumbenu-bottom-movies"></li>
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li class="menu-bottom-adapt-content menu-bottom-item">
-                                <a href="/base">
-                                    <span>DOPASUJ TREŚĆ</span>
-                                </a>
-                                <div class="header-bottom-submenu">
-                                    <ul class="submenu-items">
-                                        <li class="menu-submenu-item sumbenu-bottom-movies"></li>
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li class="menu-bottom-appguide menu-bottom-item">
-                                <a href="/cockpite">
-                                    <span>PRZEWODNIK PO SERWISIE</span>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
