@@ -25,6 +25,7 @@
 
 <div class="page-container">
     <div class="page-content">
+        <br><br><br><br><br><br><br><br><br><br><br><br>
         <jsp:include page="newsBox.jsp"></jsp:include>
     </div>
 </div>

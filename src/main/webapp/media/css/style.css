@@ -21,6 +21,8 @@
     height: 90px;
 }
 
+/*LOGO*/
+
 .logo-container{
     margin-left: 0;
     width: 17%;
@@ -35,11 +37,49 @@
     padding-top: 17px;
 }
 
+/*SEARCH*/
+
 .search-container{
     margin-left: 17%;
     margin-right: 17%;
     height: 90px;
 }
+
+#search-form{
+    width: 600px;
+    height: 70px;
+    margin-left: 100px;
+}
+
+.form-input{
+    width: 400px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.search-button{
+    width: 50px;
+    height: 50px;
+    top: 10px;
+}
+
+.search-icon{
+    width: 50px;
+    height: 50px;
+}
+
+/*USER PANEL*/
+
+.user-header-panel{
+    width: 17%;
+    margin-right: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+
+
+/*MENU AND SUBMENU*/
 
 .header-bottom {
     width: 70%;
@@ -48,6 +88,16 @@
     margin-left: 17%;
     margin-right: 17%;
     background-color: black;
+}
+
+.menu-bottom-list{
+    display: flex;
+}
+
+.menu-bottom-item{
+    display: inline-block;
+    position: relative;
+    padding: 5px;
 }
 
 /*---PAGE CONTENT---*/
