@@ -11,26 +11,26 @@
 
     <div class="news-box">
         <div class="main-news-container">
-
+            <p><h1>Główny news</h1></p>
         </div>
 
         <div class="top-news-midbox">
             <div class="left-top-midbox-contaner">
-
+                <p><h1>Pomniejszy news</h1></p>
             </div>
 
             <div class="right-top-midbox-container">
-
+                <p><h1>Pomniejszy news</h1></p>
             </div>
         </div>
 
         <div class="bottom-news-midbox">
             <div class="left-bottom-midbox-contaner">
-
+                <p><h1>Pomniejszy news</h1></p>
             </div>
 
             <div class="right-bottom-midbox-container">
-
+                <p><h1>Pomniejszy news</h1></p>
             </div>
         </div>
     </div>
