@@ -89,33 +89,35 @@
         <div class="header-bottom">
             <ul class="menu-bottom-list">
                 <li class="menu-bottom-homepage menu-bottom-item">
-                    <a href="/"></a>
+                    <a href="/" class="menu-item">
+                        <span>GŁÓWNA</span>
+                    </a>
                 </li>
 
                 <li class="menu-bottom-cockpite menu-bottom-item">
-                    <a href="/cockpite">
+                    <a href="/cockpite" class="menu-item">
                         <span>KOKPIT</span>
                     </a>
                 </li>
 
                 <li class="menu-bottom-base menu-bottom-item">
-                    <a href="/base">
+                    <a href="/base" class="menu-item">
                         <span>BAZA</span>
                     </a>
                     <div class="header-bottom-submenu">
                         <ul class="submenu-items">
-                            <li class="menu-submenu-item sumbenu-bottom-movies"></li>
-                            <li class="menu-submenu-item sumbenu-bottom-filmmakers"></li>
-                            <li class="menu-submenu-item sumbenu-bottom-games"></li>
-                            <li class="menu-submenu-item sumbenu-bottom-gamemakers"></li>
-                            <li class="menu-submenu-item sumbenu-bottom-books"></li>
-                            <li class="menu-submenu-item sumbenu-bottom-bookscreators"></li>
+                            <li class="menu-submenu-item sumbenu-bottom-movies">FILMY</li>
+                            <li class="menu-submenu-item sumbenu-bottom-filmmakers">TWÓRCY FILMOWI</li>
+                            <li class="menu-submenu-item sumbenu-bottom-games">GRY</li>
+                            <li class="menu-submenu-item sumbenu-bottom-gamemakers">TWÓRCY GIER</li>
+                            <li class="menu-submenu-item sumbenu-bottom-books">KSIĄŻKI</li>
+                            <li class="menu-submenu-item sumbenu-bottom-bookscreators">AUTORZY</li>
                         </ul>
                     </div>
                 </li>
 
                 <li class="menu-bottom-society menu-bottom-item">
-                    <a href="/base">
+                    <a href="/community" class="menu-item">
                         <span>SPOŁECZNOŚĆ</span>
                     </a>
                     <div class="header-bottom-submenu">
@@ -127,7 +129,7 @@
                 </li>
 
                 <li class="menu-bottom-multimedia menu-bottom-item">
-                    <a href="/base">
+                    <a href="/multimedia" class="menu-item">
                         <span>MULTIMEDIA</span>
                     </a>
                     <div class="header-bottom-submenu">
@@ -138,13 +140,13 @@
                 </li>
 
                 <li class="menu-bottom-news menu-bottom-item">
-                    <a href="/cockpite">
+                    <a href="/news" class="menu-item">
                         <span>NEWSY</span>
                     </a>
                 </li>
 
                 <li class="menu-bottom-add-element menu-bottom-item">
-                    <a href="/base">
+                    <a href="/addToBase" class="menu-item">
                         <span>DODAJ DO BAZY</span>
                     </a>
                     <div class="header-bottom-submenu">
@@ -155,7 +157,7 @@
                 </li>
 
                 <li class="menu-bottom-adapt-content menu-bottom-item">
-                    <a href="/base">
+                    <a href="/adjustContent" class="menu-item">
                         <span>DOPASUJ TREŚĆ</span>
                     </a>
                     <div class="header-bottom-submenu">
@@ -166,7 +168,7 @@
                 </li>
 
                 <li class="menu-bottom-appguide menu-bottom-item">
-                    <a href="/cockpite">
+                    <a href="/guide" class="menu-item">
                         <span>PRZEWODNIK PO SERWISIE</span>
                     </a>
                 </li>
