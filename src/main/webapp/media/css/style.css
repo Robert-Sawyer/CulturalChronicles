@@ -98,6 +98,40 @@
     display: inline-block;
     position: relative;
     padding: 5px;
+    background-color: red;
+}
+
+.menu-item{
+    color: white;
+}
+
+.menu-item:hover{
+    background-color: crimson;
+    color: black;
+}
+
+.submenu-items{
+    display: none;
+    list-style: none;
+}
+
+.menu-bottom-item:hover > div ul{
+    visibility: visible;
+    display: block;
+    list-style: none;
+}
+
+.header-bottom-submenu{
+    display: block;
+    position: absolute;
+    width: auto;
+    box-sizing: border-box;
+    top: 35px;
+    background-color: white;
+}
+
+.submenu-items:hover{
+    display: block;
 }
 
 /*---PAGE CONTENT---*/
