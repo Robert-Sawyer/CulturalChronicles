@@ -105,13 +105,37 @@
                         <span>BAZA</span>
                     </a>
                     <div class="header-bottom-submenu">
-                        <ul class="submenu-items">
-                            <li class="menu-submenu-item sumbenu-bottom-movies">FILMY</li>
-                            <li class="menu-submenu-item sumbenu-bottom-filmmakers">TWÓRCY FILMOWI</li>
-                            <li class="menu-submenu-item sumbenu-bottom-games">GRY</li>
-                            <li class="menu-submenu-item sumbenu-bottom-gamemakers">TWÓRCY GIER</li>
-                            <li class="menu-submenu-item sumbenu-bottom-books">KSIĄŻKI</li>
-                            <li class="menu-submenu-item sumbenu-bottom-bookscreators">AUTORZY</li>
+                        <ul class="submenu-bottom-list">
+                            <li class="menu-submenu-item sumbenu-bottom-movies">
+                                <a href="/movies" class="submenu-item">
+                                    <span>FILMY</span>
+                                </a>
+                            </li>
+                            <li class="menu-submenu-item sumbenu-bottom-filmmakers">
+                                <a href="/moviemakers" class="submenu-item">
+                                    <span>TWÓRCY FILMOWI</span>
+                                </a>
+                            </li>
+                            <li class="menu-submenu-item sumbenu-bottom-games"
+                                <a href="/games" class="submenu-item">
+                                    <span>GRY</span>
+                                </a>
+                            </li>
+                            <li class="menu-submenu-item sumbenu-bottom-gamemakers">
+                                <a href="/gamemakers" class="submenu-item">
+                                    <span>TWÓRCY GIER</span>
+                                </a>
+                            </li>
+                            <li class="menu-submenu-item sumbenu-bottom-books">
+                                <a href="/books" class="submenu-item">
+                                    <span>KSIĄŻKI</span>
+                                </a>
+                            </li>
+                            <li class="menu-submenu-item sumbenu-bottom-bookscreators">
+                                <a href="/bookcreators" class="submenu-item">
+                                    <span>AUTORZY</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
