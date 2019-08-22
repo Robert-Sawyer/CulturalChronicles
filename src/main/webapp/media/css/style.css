@@ -110,7 +110,7 @@
     color: black;
 }
 
-.submenu-items{
+.submenu-bottom-list{
     display: none;
     list-style: none;
 }
@@ -124,15 +124,21 @@
 .header-bottom-submenu{
     display: block;
     position: absolute;
-    width: auto;
+    width: 150px;
     box-sizing: border-box;
     top: 35px;
     background-color: white;
 }
 
-.submenu-items:hover{
+.submenu-bottom-list:hover{
     display: block;
 }
+
+.menu-submenu-item{
+    list-style: none;
+    margin-left: -10px;
+}
+
 
 /*---PAGE CONTENT---*/
 
