@@ -16,12 +16,9 @@
                 <div class="search-Main">
                     <form id="search-form">
                         <fieldset class="search-fiedset">
-                            <input id="input-search-main" class="form-input"
-                                   placeholder="Szukaj filmów, gier, lub książek">
+                            <input id="input-search-main" class="form-input" placeholder="Szukaj filmów, gier, lub książek">
                             <button class="search-button">
-                                <a class="search-link">
                                     <img class="search-icon" src="../../../media/images/search-icon.png">
-                                </a>
                             </button>
                         </fieldset>
                     </form>
@@ -116,7 +113,7 @@
                                     <span>TWÓRCY FILMOWI</span>
                                 </a>
                             </li>
-                            <li class="menu-submenu-item sumbenu-bottom-games"
+                            <li class="menu-submenu-item sumbenu-bottom-games">
                                 <a href="/games" class="submenu-item">
                                     <span>GRY</span>
                                 </a>

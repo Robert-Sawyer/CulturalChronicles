@@ -61,11 +61,17 @@
     width: 50px;
     height: 50px;
     top: 10px;
+    padding: 0;
+    position: absolute;
+    border-radius: 2px;
+    background-color: black;
 }
 
 .search-icon{
     width: 50px;
     height: 50px;
+    margin-left: -2px;
+    margin-top: -2px;
 }
 
 /*USER PANEL*/
@@ -124,7 +130,7 @@
 .header-bottom-submenu{
     display: block;
     position: absolute;
-    width: 150px;
+    width: 180px;
     box-sizing: border-box;
     top: 35px;
     background-color: white;
