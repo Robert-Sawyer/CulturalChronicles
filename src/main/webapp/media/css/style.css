@@ -107,11 +107,11 @@
     background-color: red;
 }
 
-.menu-item{
+.menu-link{
     color: white;
 }
 
-.menu-item:hover{
+.menu-link:hover{
     background-color: crimson;
     color: black;
 }

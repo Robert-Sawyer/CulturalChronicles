@@ -86,50 +86,50 @@
         <div class="header-bottom">
             <ul class="menu-bottom-list">
                 <li class="menu-bottom-homepage menu-bottom-item">
-                    <a href="/" class="menu-item">
+                    <a href="/" class="menu-link">
                         <span>GŁÓWNA</span>
                     </a>
                 </li>
 
                 <li class="menu-bottom-cockpite menu-bottom-item">
-                    <a href="/cockpite" class="menu-item">
+                    <a href="/cockpite" class="menu-link">
                         <span>KOKPIT</span>
                     </a>
                 </li>
 
                 <li class="menu-bottom-base menu-bottom-item">
-                    <a href="/base" class="menu-item">
+                    <a href="/base" class="menu-link">
                         <span>BAZA</span>
                     </a>
                     <div class="header-bottom-submenu">
                         <ul class="submenu-bottom-list">
                             <li class="menu-submenu-item sumbenu-bottom-movies">
-                                <a href="/movies" class="submenu-item">
+                                <a href="/movies" class="submenu-link">
                                     <span>FILMY</span>
                                 </a>
                             </li>
                             <li class="menu-submenu-item sumbenu-bottom-filmmakers">
-                                <a href="/moviemakers" class="submenu-item">
+                                <a href="/moviemakers" class="submenu-link">
                                     <span>TWÓRCY FILMOWI</span>
                                 </a>
                             </li>
                             <li class="menu-submenu-item sumbenu-bottom-games">
-                                <a href="/games" class="submenu-item">
+                                <a href="/games" class="submenu-link">
                                     <span>GRY</span>
                                 </a>
                             </li>
                             <li class="menu-submenu-item sumbenu-bottom-gamemakers">
-                                <a href="/gamemakers" class="submenu-item">
+                                <a href="/gamemakers" class="submenu-link">
                                     <span>TWÓRCY GIER</span>
                                 </a>
                             </li>
                             <li class="menu-submenu-item sumbenu-bottom-books">
-                                <a href="/books" class="submenu-item">
+                                <a href="/books" class="submenu-link">
                                     <span>KSIĄŻKI</span>
                                 </a>
                             </li>
                             <li class="menu-submenu-item sumbenu-bottom-bookscreators">
-                                <a href="/bookcreators" class="submenu-item">
+                                <a href="/bookcreators" class="submenu-link">
                                     <span>AUTORZY</span>
                                 </a>
                             </li>
@@ -138,11 +138,11 @@
                 </li>
 
                 <li class="menu-bottom-society menu-bottom-item">
-                    <a href="/community" class="menu-item">
+                    <a href="/community" class="menu-link">
                         <span>SPOŁECZNOŚĆ</span>
                     </a>
                     <div class="header-bottom-submenu">
-                        <ul class="submenu-items">
+                        <ul class="submenu-bottom-list">
                             <li class="menu-submenu-item sumbenu-bottom-movies"></li>
 
                         </ul>
@@ -150,46 +150,46 @@
                 </li>
 
                 <li class="menu-bottom-multimedia menu-bottom-item">
-                    <a href="/multimedia" class="menu-item">
+                    <a href="/multimedia" class="menu-link">
                         <span>MULTIMEDIA</span>
                     </a>
                     <div class="header-bottom-submenu">
-                        <ul class="submenu-items">
+                        <ul class="submenu-bottom-list">
                             <li class="menu-submenu-item sumbenu-bottom-movies"></li>
                         </ul>
                     </div>
                 </li>
 
                 <li class="menu-bottom-news menu-bottom-item">
-                    <a href="/news" class="menu-item">
+                    <a href="/news" class="menu-link">
                         <span>NEWSY</span>
                     </a>
                 </li>
 
                 <li class="menu-bottom-add-element menu-bottom-item">
-                    <a href="/addToBase" class="menu-item">
+                    <a href="/addToBase" class="menu-link">
                         <span>DODAJ DO BAZY</span>
                     </a>
                     <div class="header-bottom-submenu">
-                        <ul class="submenu-items">
+                        <ul class="submenu-bottom-list">
                             <li class="menu-submenu-item sumbenu-bottom-movies"></li>
                         </ul>
                     </div>
                 </li>
 
                 <li class="menu-bottom-adapt-content menu-bottom-item">
-                    <a href="/adjustContent" class="menu-item">
+                    <a href="/adjustContent" class="menu-link">
                         <span>DOPASUJ TREŚĆ</span>
                     </a>
                     <div class="header-bottom-submenu">
-                        <ul class="submenu-items">
+                        <ul class="submenu-bottom-list">
                             <li class="menu-submenu-item sumbenu-bottom-movies"></li>
                         </ul>
                     </div>
                 </li>
 
                 <li class="menu-bottom-appguide menu-bottom-item">
-                    <a href="/guide" class="menu-item">
+                    <a href="/guide" class="menu-link">
                         <span>PRZEWODNIK PO SERWISIE</span>
                     </a>
                 </li>
