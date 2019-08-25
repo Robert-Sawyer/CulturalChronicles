@@ -74,6 +74,25 @@
     margin-top: -2px;
 }
 
+/*NIEZALOGOWANY*/
+
+.header-top-login{
+    width: 17%;
+    height: 90px;
+    border: 1px solid white;
+}
+.not-login-list{
+    display: flex;
+}
+
+.not-login-item{
+    list-style: none;
+}
+
+.not-login-link{
+    color: white;
+}
+
 /*USER PANEL*/
 
 .user-header-panel{
