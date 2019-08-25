@@ -16,9 +16,10 @@
                 <div class="search-Main">
                     <form id="search-form">
                         <fieldset class="search-fiedset">
-                            <input id="input-search-main" class="form-input" placeholder="Szukaj filmów, gier, lub książek">
+                            <input id="input-search-main" class="form-input"
+                                   placeholder="Szukaj filmów, gier, lub książek">
                             <button class="search-button">
-                                    <img class="search-icon" src="../../../media/images/search-icon.png">
+                                <img class="search-icon" src="../../../media/images/search-icon.png">
                             </button>
                         </fieldset>
                     </form>
@@ -27,25 +28,39 @@
                     </div>
                 </div>
             </div>
+            <sec:authorize access="!isAuthenticated()">
+                <div class="header-top-login">
+                    <ul class="not-login-list">
+                        <li class="not-login-item">
+                            <a class="not-login-link" href='<c:url value="/login" />'>Logowanie</a>
+                        </li>
+                        <li class="not-login-item">
+                            <a class="not-login-link" href='<c:url value="/register" />'>Rejestracja</a>
+                        </li>
+                    </ul>
+                </div>
+            </sec:authorize>
+
+            <sec:authorize access="isAuthenticated()">
             <div class="user-header-panel">
                 <div id="userHeaderButton">
                     <a href="/user/Robert_Sawyer" class="user-profile__wrapper">
-                            <span class="user__avatar ">
-                                <img src="https://1.fwcdn.pl/u/44/35/1974435/1974435.2.jpg"
-                                     alt="Robert Sawyer - avatar">
-                            </span>
+                                <span class="user__avatar ">
+                                    <img src="https://1.fwcdn.pl/u/44/35/1974435/1974435.2.jpg"
+                                         alt="Robert Sawyer - avatar">
+                                </span>
 
                         <div class="user__profile__wrapper">
-                                <span class="user__name-wrap">
-                                    <span class="user__name">Robert Sawyer</span>
-                                </span>
+                                    <span class="user__name-wrap">
+                                        <span class="user__name">Robert Sawyer</span>
+                                    </span>
                         </div>
                     </a>
 
                     <span id="userMenuToggle" class="user-menu_toggle">
-                            <i class="ico ico--arrowDown"></i>
-                            <span id="userCounter" class="user-menu_toggle__notifications hide"></span>
-                        </span>
+                                <i class="ico ico--arrowDown"></i>
+                                <span id="userCounter" class="user-menu_toggle__notifications hide"></span>
+                            </span>
                     <div id="userMenu">
                         <ul class="list">
                             <li class="item-user item-extra">
@@ -83,6 +98,8 @@
                 </div>
             </div>
         </div>
+        </sec:authorize>
+
         <div class="header-bottom">
             <ul class="menu-bottom-list">
                 <li class="menu-bottom-homepage menu-bottom-item">
