@@ -45,12 +45,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests()
                 .antMatchers("/", "/home", "/media/js/**", "/media/css/**", "/media/images/**").permitAll()
-                .antMatchers("/").permitAll()
                 .antMatchers("/register").permitAll()
                 .antMatchers("/login").anonymous()
                 .antMatchers("/user", "/user/**").hasRole("USER")
                 .antMatchers("/admin", "/admin**").hasRole("ADMIN")
-                .antMatchers("/media").permitAll()
         //tutaj będą kolejne punkty dostępu do podstron
                 .anyRequest().authenticated()
                 .and()
