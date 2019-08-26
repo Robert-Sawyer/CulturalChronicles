@@ -26,7 +26,9 @@
 .logo-container{
     margin-left: 0;
     width: 17%;
+    height: 90px;
     position: absolute;
+    border: 1px solid white;
 }
 
 .logoText {
@@ -42,17 +44,22 @@
 .search-container{
     margin-left: 17%;
     margin-right: 17%;
+    width: 66%;
     height: 90px;
+    float: left;
+    border: 1px solid white;
 }
 
 #search-form{
-    width: 600px;
+    width: 800px;
     height: 70px;
     margin-left: 100px;
+    margin-top: 5px;
+    align-content: center;
 }
 
 .form-input{
-    width: 400px;
+    width: 550px;
     height: 50px;
     margin-top: 10px;
 }
@@ -60,7 +67,7 @@
 .search-button{
     width: 50px;
     height: 50px;
-    top: 10px;
+    margin-top: 10px;
     padding: 0;
     position: absolute;
     border-radius: 2px;
@@ -78,19 +85,33 @@
 
 .header-top-login{
     width: 17%;
+    margin-right: 0;
+    margin-left: 83%;
+    margin-top: 0;
+    float: right;
+    position: absolute;
     height: 90px;
     border: 1px solid white;
 }
 .not-login-list{
     display: flex;
+    margin-left: -40px;
 }
 
 .not-login-item{
     list-style: none;
+    padding: 15px;
+    margin-top: 15px;
 }
 
 .not-login-link{
     color: white;
+    font-size: 17px;
+}
+
+.not-login-link:hover{
+    color: red;
+    text-decoration: none;
 }
 
 /*USER PANEL*/
@@ -107,22 +128,27 @@
 /*MENU AND SUBMENU*/
 
 .header-bottom {
-    width: 70%;
+    width: 66%;
     top: 90px;
-    height: 40px;
+    height: 42px;
     margin-left: 17%;
     margin-right: 17%;
     background-color: black;
+    border: 1px solid white;
 }
 
 .menu-bottom-list{
     display: flex;
+    width: max-content;
+    height: 42px;
+    margin-left: -39.5px;
 }
 
 .menu-bottom-item{
     display: inline-block;
+    width: auto;
     position: relative;
-    padding: 5px;
+    padding: 6px 8.8px 8.8px;
     background-color: red;
 }
 
@@ -131,8 +157,8 @@
 }
 
 .menu-link:hover{
-    background-color: crimson;
     color: black;
+    text-decoration: none;
 }
 
 .submenu-bottom-list{
@@ -149,9 +175,10 @@
 .header-bottom-submenu{
     display: block;
     position: absolute;
-    width: 180px;
+    width: max-content;
     box-sizing: border-box;
-    top: 35px;
+    padding-right: 15px;
+    top: 42px;
     background-color: white;
 }
 
@@ -162,6 +189,10 @@
 .menu-submenu-item{
     list-style: none;
     margin-left: -10px;
+}
+
+.menu-submenu-link:hover{
+    background-color: gold;
 }
 
 
@@ -185,7 +216,11 @@
     margin-right: 17%;
 }
 
+/*NEWSBOX*/
 
+.main-news-container{
+    border: 1px solid white;
+}
 /*---FOOTER---*/
 
 #footer-section {
