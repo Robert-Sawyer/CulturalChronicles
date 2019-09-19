@@ -1,12 +1,20 @@
 package com.github.robertsawyer.CulturalChronicles.domain.model;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
 
     private Long id;
