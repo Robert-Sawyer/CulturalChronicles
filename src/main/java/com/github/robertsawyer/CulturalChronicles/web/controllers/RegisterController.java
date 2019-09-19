@@ -1,7 +1,9 @@
 package com.github.robertsawyer.CulturalChronicles.web.controllers;
 
 import com.github.robertsawyer.CulturalChronicles.dto.RegisterDTO;
+import com.github.robertsawyer.CulturalChronicles.dto.UserDTO;
 import com.github.robertsawyer.CulturalChronicles.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -16,11 +18,12 @@ import javax.validation.Valid;
 @RequestMapping("/register")
 public class RegisterController {
 
+
     private UserService userService;
 
-    public RegisterController(UserService userService) {
-        this.userService = userService;
-    }
+//    public RegisterController(UserService userService) {
+//        this.userService = userService;
+//    }
 
     @GetMapping
     public String prepareRegistrationForm(Model model) {
@@ -46,6 +49,10 @@ public class RegisterController {
     }
 
     private boolean checkIsUsernameIsAvailable(RegisterDTO form) {
+        UserDTO user = userService.findUser(form.getLogin());
+        if (user == null) {
+            return true;
+        }
         return false;
     }
 
