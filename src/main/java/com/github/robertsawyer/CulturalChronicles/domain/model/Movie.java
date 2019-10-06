@@ -3,16 +3,21 @@ package com.github.robertsawyer.CulturalChronicles.domain.model;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Table(name = "movies")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Movie {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = false)
     private String title;
+    
     private List<Director> director;
     private List<Writer> writer;
     private List<Producer> producers;

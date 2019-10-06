@@ -3,20 +3,27 @@ package com.github.robertsawyer.CulturalChronicles.domain.model;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 public class Book {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = false)
     private String title;
+    @Column(nullable = false)
     private Author author;
     private Long pages;
+    private Publisher publisher;
     private Long yearOfPublish;
+    private List<String> genre;
 
     public Long getId() {
         return id;
@@ -40,6 +47,22 @@ public class Book {
 
     public void setAuthor(Author author) {
         this.author = author;
+    }
+
+    public Publisher getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(Publisher publisher) {
+        this.publisher = publisher;
+    }
+
+    public List<String> getGenre() {
+        return genre;
+    }
+
+    public void setGenre(List<String> genre) {
+        this.genre = genre;
     }
 
     public Long getPages() {
