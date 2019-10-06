@@ -17,7 +17,6 @@ public class AddMovieDTO {
     private List<String> genre;
 
     private List<String> country;
-
     private Integer productionYear;
 
     public String getTitle() {
