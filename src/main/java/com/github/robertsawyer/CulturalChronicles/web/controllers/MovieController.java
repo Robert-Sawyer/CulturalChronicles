@@ -11,10 +11,12 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
 
 @Controller
+@RequestMapping("/movies")
 public class MovieController {
 
     public static final Logger logger = LoggerFactory.getLogger(MovieController.class);
@@ -29,14 +31,14 @@ public class MovieController {
     @GetMapping("/add")
     public String prepareAddNewMovieForm(Model model) {
         model.addAttribute("newMovie", new AddMovieDTO());
-        return "movies/addMovieForm";
+        return "movies/addMovie";
     }
 
     @PostMapping("/add")
     public String addNewMovie(@Valid @ModelAttribute("movie") AddMovieDTO addMovieDTO, BindingResult bindingResult) {
 
         if (bindingResult.hasErrors()){
-            return "movies/addMovieForm";
+            return "movies/addMovie";
         }
         logger.info("Dodaję film do bazy.");
 
