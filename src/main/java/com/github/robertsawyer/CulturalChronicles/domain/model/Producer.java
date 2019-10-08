@@ -1,5 +1,7 @@
 package com.github.robertsawyer.CulturalChronicles.domain.model;
 
+import java.util.List;
+
 public class Producer {
 
     private Long id;
@@ -8,4 +10,5 @@ public class Producer {
     private Integer yearOfBirth;
     private Integer yearOfDeath;
     private Boolean favourite;
+    private List<Movie> movies;
 }

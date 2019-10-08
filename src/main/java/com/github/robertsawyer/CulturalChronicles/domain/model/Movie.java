@@ -17,7 +17,7 @@ public class Movie {
     private Long id;
     @Column(nullable = false)
     private String title;
-    
+
     private List<Director> director;
     private List<Writer> writer;
     private List<Producer> producers;
