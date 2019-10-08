@@ -1,8 +1,10 @@
 package com.github.robertsawyer.CulturalChronicles.services;
 
 import com.github.robertsawyer.CulturalChronicles.domain.model.Book;
+import com.github.robertsawyer.CulturalChronicles.domain.model.Game;
 import com.github.robertsawyer.CulturalChronicles.domain.model.Movie;
 import com.github.robertsawyer.CulturalChronicles.dto.AddBookDTO;
+import com.github.robertsawyer.CulturalChronicles.dto.AddGameDTO;
 import com.github.robertsawyer.CulturalChronicles.dto.AddMovieDTO;
 
 public class Converters {
@@ -26,5 +28,12 @@ public class Converters {
         book.setGenre(addBookDTO.getGenre());
         book.setPages(addBookDTO.getPages());
         return book;
+    }
+
+    public static Game convertToNewGame(AddGameDTO addGameDTO) {
+        Game game = new Game();
+        game.setTitle(addGameDTO.getTitle());
+        game.setGenre(addGameDTO.getGenre());
+        return game;
     }
 }
