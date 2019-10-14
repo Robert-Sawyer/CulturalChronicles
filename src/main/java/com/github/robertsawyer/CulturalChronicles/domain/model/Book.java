@@ -4,11 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
+@Table(name = "books")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Book {
@@ -18,12 +19,18 @@ public class Book {
     private Long id;
     @Column(nullable = false)
     private String title;
-    @Column(nullable = false)
-    private Author author;
+    @ManyToMany
+    @JoinTable(name = "book_author",
+            joinColumns = { @JoinColumn(name = "book_id") },
+            inverseJoinColumns = { @JoinColumn(name = "author_id") })
+    private Set<Author> authors = new HashSet<Author>();
+
     private Long pages;
-    private Publisher publisher;
+//    private Publisher publisher;
     private Long yearOfPublish;
-    private List<String> genre;
+
+//    @ManyToOne
+//    private Set<String> genre = new HashSet<String>();
 
     public Long getId() {
         return id;
@@ -41,29 +48,29 @@ public class Book {
         this.title = title;
     }
 
-    public Author getAuthor() {
-        return author;
+    public Set<Author> getAuthors() {
+        return authors;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
+    public void setAuthors(Set<Author> authors) {
+        this.authors = authors;
     }
 
-    public Publisher getPublisher() {
-        return publisher;
-    }
+//    public Publisher getPublisher() {
+//        return publisher;
+//    }
+//
+//    public void setPublisher(Publisher publisher) {
+//        this.publisher = publisher;
+//    }
 
-    public void setPublisher(Publisher publisher) {
-        this.publisher = publisher;
-    }
-
-    public List<String> getGenre() {
-        return genre;
-    }
-
-    public void setGenre(List<String> genre) {
-        this.genre = genre;
-    }
+//    public Set<String> getGenre() {
+//        return genre;
+//    }
+//
+//    public void setGenre(Set<String> genre) {
+//        this.genre = genre;
+//    }
 
     public Long getPages() {
         return pages;

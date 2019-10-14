@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
-import java.util.List;
+import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,9 +14,9 @@ public class AddMovieDTO {
     private String title;
 
     @NotNull
-    private List<String> genre;
+    private Set<String> genre;
 
-    private List<String> country;
+    private Set<String> country;
     private Integer productionYear;
 
     public String getTitle() {
@@ -27,19 +27,19 @@ public class AddMovieDTO {
         this.title = title;
     }
 
-    public List<String> getGenre() {
+    public Set<String> getGenre() {
         return genre;
     }
 
-    public void setGenre(List<String> genre) {
+    public void setGenre(Set<String> genre) {
         this.genre = genre;
     }
 
-    public List<String> getCountry() {
+    public Set<String> getCountry() {
         return country;
     }
 
-    public void setCountry(List<String> country) {
+    public void setCountry(Set<String> country) {
         this.country = country;
     }
 

@@ -3,8 +3,7 @@ package com.github.robertsawyer.CulturalChronicles.domain.model;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "games")
@@ -12,6 +11,8 @@ import javax.persistence.Table;
 @AllArgsConstructor
 public class Game {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String genre;

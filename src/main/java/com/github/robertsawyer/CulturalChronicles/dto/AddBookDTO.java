@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.List;
+import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,12 +20,12 @@ public class AddBookDTO {
 
     @NotNull
     @Size(min = 1)
-    private Author author;
+    private Set<Author> author;
 
     private Long yearOfPublish;
     private Long pages;
     private Publisher publisher;
-    private List<String> genre;
+    private Set<String> genre;
 
     public String getTitle() {
         return title;
@@ -42,12 +43,20 @@ public class AddBookDTO {
         this.pages = pages;
     }
 
-    public Author getAuthor() {
+    public Set<Author> getAuthor() {
         return author;
     }
 
-    public void setAuthor(Author author) {
+    public void setAuthor(Set<Author> author) {
         this.author = author;
+    }
+
+    public void setGenre(Set<String> genre) {
+        this.genre = genre;
+    }
+
+    public Set<String> getGenre() {
+        return genre;
     }
 
     public Long getYearOfPublish() {
@@ -66,11 +75,4 @@ public class AddBookDTO {
         this.publisher = publisher;
     }
 
-    public List<String> getGenre() {
-        return genre;
-    }
-
-    public void setGenre(List<String> genre) {
-        this.genre = genre;
-    }
 }
