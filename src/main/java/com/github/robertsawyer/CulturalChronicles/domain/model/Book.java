@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -86,5 +87,22 @@ public class Book {
 
     public void setYearOfPublish(Long yearOfPublish) {
         this.yearOfPublish = yearOfPublish;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Book)) return false;
+        Book book = (Book) o;
+        return Objects.equals(id, book.id) &&
+                Objects.equals(title, book.title) &&
+                Objects.equals(authors, book.authors) &&
+                Objects.equals(pages, book.pages) &&
+                Objects.equals(yearOfPublish, book.yearOfPublish);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, title, authors, pages, yearOfPublish);
     }
 }
