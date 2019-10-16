@@ -4,7 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "movies")
@@ -18,15 +19,29 @@ public class Movie {
     @Column(nullable = false)
     private String title;
 
-    private List<Director> director;
-    private List<Writer> writer;
-    private List<Producer> producers;
+    @Column
+    @ElementCollection(targetClass=String.class)
+    private Set<Director> director;
+
+    @Column
+    @ElementCollection(targetClass=String.class)
+    private Set<Writer> writer;
+
+    @Column
+    @ElementCollection(targetClass=String.class)
+    private Set<Producer> producers;
     private Integer yearOfProduction;
     private Double rating;
     private Boolean favourite;
     private Long duration;
-    private List<String> country;
-    private List<String> genre;
+
+    @Column
+    @ElementCollection(targetClass=String.class)
+    private Set<String> country = new HashSet<>();
+
+    @Column
+    @ElementCollection(targetClass=String.class)
+    private Set<String> genre = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -42,30 +57,6 @@ public class Movie {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public List<Director> getDirector() {
-        return director;
-    }
-
-    public void setDirector(List<Director> director) {
-        this.director = director;
-    }
-
-    public List<Writer> getWriter() {
-        return writer;
-    }
-
-    public void setWriter(List<Writer> writer) {
-        this.writer = writer;
-    }
-
-    public List<Producer> getProducers() {
-        return producers;
-    }
-
-    public void setProducers(List<Producer> producers) {
-        this.producers = producers;
     }
 
     public Integer getYearOfProduction() {
@@ -100,19 +91,43 @@ public class Movie {
         this.duration = duration;
     }
 
-    public List<String> getCountry() {
+    public Set<Director> getDirector() {
+        return director;
+    }
+
+    public void setDirector(Set<Director> director) {
+        this.director = director;
+    }
+
+    public Set<Writer> getWriter() {
+        return writer;
+    }
+
+    public void setWriter(Set<Writer> writer) {
+        this.writer = writer;
+    }
+
+    public Set<Producer> getProducers() {
+        return producers;
+    }
+
+    public void setProducers(Set<Producer> producers) {
+        this.producers = producers;
+    }
+
+    public Set<String> getCountry() {
         return country;
     }
 
-    public void setCountry(List<String> country) {
+    public void setCountry(Set<String> country) {
         this.country = country;
     }
 
-    public List<String> getGenre() {
+    public Set<String> getGenre() {
         return genre;
     }
 
-    public void setGenre(List<String> genre) {
+    public void setGenre(Set<String> genre) {
         this.genre = genre;
     }
 }

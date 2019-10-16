@@ -30,8 +30,9 @@ public class Book {
 //    private Publisher publisher;
     private Long yearOfPublish;
 
-//    @ManyToOne
-//    private Set<String> genre = new HashSet<String>();
+    @Column
+    @ElementCollection(targetClass=String.class)
+    private Set<String> genre = new HashSet<String>();
 
     public Long getId() {
         return id;
@@ -65,13 +66,13 @@ public class Book {
 //        this.publisher = publisher;
 //    }
 
-//    public Set<String> getGenre() {
-//        return genre;
-//    }
-//
-//    public void setGenre(Set<String> genre) {
-//        this.genre = genre;
-//    }
+    public Set<String> getGenre() {
+        return genre;
+    }
+
+    public void setGenre(Set<String> genre) {
+        this.genre = genre;
+    }
 
     public Long getPages() {
         return pages;

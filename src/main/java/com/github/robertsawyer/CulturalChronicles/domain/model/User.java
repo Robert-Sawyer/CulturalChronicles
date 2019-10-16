@@ -35,10 +35,18 @@ public class User {
 //            inverseJoinColumns = @JoinColumn(name = "role_id"))
 //    private Set<Role> role = new HashSet<Role>();
 
-    private UserDetails userDetails;
+//    private UserDetails userDetails;
 
+    @Column
+    @ElementCollection(targetClass=Movie.class)
     private List<Movie> movies;
+
+    @Column
+    @ElementCollection(targetClass=Book.class)
     private List<Book> books;
+
+    @Column
+    @ElementCollection(targetClass=Game.class)
     private List<Game> games;
 
     @PrePersist
