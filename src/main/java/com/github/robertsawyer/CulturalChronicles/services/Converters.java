@@ -22,9 +22,9 @@ public class Converters {
     public static Book convertToNewBook(AddBookDTO addBookDTO) {
         Book book = new Book();
         book.setTitle(addBookDTO.getTitle());
-        book.setAuthor(addBookDTO.getAuthor());
+        book.setAuthors(addBookDTO.getAuthor());
         book.setYearOfPublish(addBookDTO.getYearOfPublish());
-        book.setPublisher(addBookDTO.getPublisher());
+//        book.setPublisher(addBookDTO.getPublisher());
         book.setGenre(addBookDTO.getGenre());
         book.setPages(addBookDTO.getPages());
         return book;
