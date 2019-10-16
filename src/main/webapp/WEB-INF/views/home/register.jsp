@@ -35,8 +35,6 @@
                 <form:errors path="*"/><br>
                 Login: <form:input path="login"/><br>
                 E-mail: <form:input path="email"/><br>
-                <%--    Imię: <form:input path="firstName"/><br>--%>
-                <%--    nazwisko: <form:input path="lastName"/><br>--%>
                 Hasło: <form:password path="password"/><br>
                 Powtórz hasło: <form:password path="confirmPassword"/><br>
                 <input type="submit" class="btn btn-danger" value="Zarejestruj"/>
