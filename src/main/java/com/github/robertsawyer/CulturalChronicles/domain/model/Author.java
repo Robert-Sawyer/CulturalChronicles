@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -17,10 +18,21 @@ public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(nullable = false)
     private String name;
+
+    @Column
+    @ElementCollection(targetClass = Book.class)
     @ManyToMany
     private Set<Book> books = new HashSet<Book>();
+
+    @Column
+    private Date birthYear;
+
+    @Column
+    private Date deathYera;
+
 
     public Long getId() {
         return id;
@@ -44,5 +56,21 @@ public class Author {
 
     public void setBooks(Set<Book> books) {
         this.books = books;
+    }
+
+    public Date getBirthYear() {
+        return birthYear;
+    }
+
+    public void setBirthYear(Date birthYear) {
+        this.birthYear = birthYear;
+    }
+
+    public Date getDeathYera() {
+        return deathYera;
+    }
+
+    public void setDeathYera(Date deathYera) {
+        this.deathYera = deathYera;
     }
 }

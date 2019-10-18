@@ -21,9 +21,17 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column
     private String login;
+
+    @Column
     private String password;
+
+    @Column
     private String email;
+
+    @Column
     private LocalDate created;
 
     @Column(name = "enabled")
@@ -35,19 +43,20 @@ public class User {
 //            inverseJoinColumns = @JoinColumn(name = "role_id"))
 //    private Set<Role> role = new HashSet<Role>();
 
-//    private UserDetails userDetails;
+    @OneToOne
+    private UserDetails userDetails;
 
     @Column
     @ElementCollection(targetClass=Movie.class)
-    private List<Movie> movies;
+    private Set<Movie> movies;
 
     @Column
     @ElementCollection(targetClass=Book.class)
-    private List<Book> books;
+    private Set<Book> books;
 
     @Column
     @ElementCollection(targetClass=Game.class)
-    private List<Game> games;
+    private Set<Game> games;
 
     @PrePersist
     public void prePersist() {

@@ -16,6 +16,7 @@ public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(nullable = false)
     private String title;
 
@@ -30,9 +31,21 @@ public class Movie {
     @Column
     @ElementCollection(targetClass=String.class)
     private Set<Producer> producers;
+
+    @Column
+    @ElementCollection(targetClass = CastMember.class)
+    private Set<CastMember> castMembers;
+
+    @Column
     private Integer yearOfProduction;
+
+    @Column
     private Double rating;
+
+    @Column
     private Boolean favourite;
+
+    @Column
     private Long duration;
 
     @Column
@@ -42,6 +55,8 @@ public class Movie {
     @Column
     @ElementCollection(targetClass=String.class)
     private Set<String> genre = new HashSet<>();
+
+    //TODO dodać resztę członków ekipy (montażysta, operator itp.)
 
     public Long getId() {
         return id;
@@ -129,5 +144,13 @@ public class Movie {
 
     public void setGenre(Set<String> genre) {
         this.genre = genre;
+    }
+
+    public Set<CastMember> getCastMembers() {
+        return castMembers;
+    }
+
+    public void setCastMembers(Set<CastMember> castMembers) {
+        this.castMembers = castMembers;
     }
 }

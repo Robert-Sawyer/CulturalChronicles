@@ -18,21 +18,32 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(nullable = false)
     private String title;
+
+    @Column
+    @ElementCollection(targetClass = Author.class)
     @ManyToMany
-    @JoinTable(name = "book_author",
-            joinColumns = { @JoinColumn(name = "book_id") },
-            inverseJoinColumns = { @JoinColumn(name = "author_id") })
+//    @JoinTable(name = "book_author",
+//            joinColumns = { @JoinColumn(name = "book_id") },
+//            inverseJoinColumns = { @JoinColumn(name = "author_id") })
     private Set<Author> authors = new HashSet<Author>();
 
+    @Column
     private Long pages;
-//    private Publisher publisher;
+
+    @Column
+    private Publisher publisher;
+
+    @Column
     private Long yearOfPublish;
 
     @Column
     @ElementCollection(targetClass=String.class)
     private Set<String> genre = new HashSet<String>();
+
+
 
     public Long getId() {
         return id;
@@ -58,13 +69,13 @@ public class Book {
         this.authors = authors;
     }
 
-//    public Publisher getPublisher() {
-//        return publisher;
-//    }
-//
-//    public void setPublisher(Publisher publisher) {
-//        this.publisher = publisher;
-//    }
+    public Publisher getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(Publisher publisher) {
+        this.publisher = publisher;
+    }
 
     public Set<String> getGenre() {
         return genre;
