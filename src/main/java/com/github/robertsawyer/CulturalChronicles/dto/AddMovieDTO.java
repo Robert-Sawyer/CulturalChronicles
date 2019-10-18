@@ -99,4 +99,12 @@ public class AddMovieDTO {
     public void setProductionYear(Integer productionYear) {
         this.productionYear = productionYear;
     }
+
+    public FilmStudio getStudio() {
+        return studio;
+    }
+
+    public void setStudio(FilmStudio studio) {
+        this.studio = studio;
+    }
 }

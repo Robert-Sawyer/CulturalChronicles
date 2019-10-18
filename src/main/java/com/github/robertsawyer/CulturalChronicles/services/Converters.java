@@ -16,6 +16,12 @@ public class Converters {
         movie.setCountry(addMovieDTO.getCountry());
         movie.setGenre(addMovieDTO.getGenre());
         movie.setYearOfProduction(addMovieDTO.getProductionYear());
+        movie.setDuration(addMovieDTO.getDuration());
+        movie.setDirector(addMovieDTO.getDirectors());
+        movie.setProducers(addMovieDTO.getProducers());
+        movie.setWriter(addMovieDTO.getWriters());
+        movie.setCastMembers(addMovieDTO.getCastMembers());
+        movie.setFilmStudio(addMovieDTO.getStudio());
         return movie;
     }
 
