@@ -56,6 +56,9 @@ public class Movie {
     @ElementCollection(targetClass=String.class)
     private Set<String> genre = new HashSet<>();
 
+    @Column
+    private FilmStudio filmStudio;
+
     //TODO dodać resztę członków ekipy (montażysta, operator itp.)
 
     public Long getId() {
@@ -152,5 +155,13 @@ public class Movie {
 
     public void setCastMembers(Set<CastMember> castMembers) {
         this.castMembers = castMembers;
+    }
+
+    public FilmStudio getFilmStudio() {
+        return filmStudio;
+    }
+
+    public void setFilmStudio(FilmStudio filmStudio) {
+        this.filmStudio = filmStudio;
     }
 }

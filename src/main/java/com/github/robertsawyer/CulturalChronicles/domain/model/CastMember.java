@@ -21,14 +21,15 @@ public class CastMember {
     @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false)
-    private Character sex;
+//    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
 
     @Column
     private Date birthDate;
 
     @Column
-    private Date dearhDate;
+    private Date deathDate;
 
     @Column
     @ElementCollection(targetClass = Movie.class)
@@ -54,14 +55,6 @@ public class CastMember {
         this.name = name;
     }
 
-    public Character getSex() {
-        return sex;
-    }
-
-    public void setSex(Character sex) {
-        this.sex = sex;
-    }
-
     public Date getBirthDate() {
         return birthDate;
     }
@@ -71,11 +64,11 @@ public class CastMember {
     }
 
     public Date getDearhDate() {
-        return dearhDate;
+        return deathDate;
     }
 
     public void setDearhDate(Date dearhDate) {
-        this.dearhDate = dearhDate;
+        this.deathDate = dearhDate;
     }
 
     public Set<Movie> getMovies() {
@@ -92,5 +85,13 @@ public class CastMember {
 
     public void setFavourite(Boolean favourite) {
         this.favourite = favourite;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
 }
