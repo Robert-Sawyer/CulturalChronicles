@@ -24,7 +24,7 @@ public class Converters {
         book.setTitle(addBookDTO.getTitle());
         book.setAuthors(addBookDTO.getAuthor());
         book.setYearOfPublish(addBookDTO.getYearOfPublish());
-//        book.setPublisher(addBookDTO.getPublisher());
+        book.setPublisher(addBookDTO.getPublisher());
         book.setGenre(addBookDTO.getGenre());
         book.setPages(addBookDTO.getPages());
         return book;
