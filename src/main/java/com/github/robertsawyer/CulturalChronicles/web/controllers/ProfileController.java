@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ProfileController {
 
     @GetMapping
-    public String showPofile(Model model) {
+    public String showProfile(Model model) {
         return "user/userProfile";
     }
 }

@@ -3,6 +3,8 @@ package com.github.robertsawyer.CulturalChronicles.web.controllers;
 import com.github.robertsawyer.CulturalChronicles.dto.RegisterDTO;
 import com.github.robertsawyer.CulturalChronicles.dto.UserDTO;
 import com.github.robertsawyer.CulturalChronicles.services.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,12 +20,14 @@ import javax.validation.Valid;
 @RequestMapping("/register")
 public class RegisterController {
 
+    public static final Logger logger = LoggerFactory.getLogger(RegisterController.class);
 
+    @Autowired
     private UserService userService;
 
-//    public RegisterController(UserService userService) {
-//        this.userService = userService;
-//    }
+    public RegisterController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping
     public String prepareRegistrationForm(Model model) {
@@ -43,6 +47,7 @@ public class RegisterController {
             result.rejectValue("login", null, "Nazwa użytkownika już zajęta");
             return "registration-page";
         }
+        logger.info("Rejestruję nowego użytkownika.");
         //Konwersja rfDTO na user encja i wywołąnie userrepositiry.save(...);
         userService.registerUser(form);
         return "redirect:/index.html";
