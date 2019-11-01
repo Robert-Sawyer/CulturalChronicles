@@ -2,8 +2,10 @@ package com.github.robertsawyer.CulturalChronicles.services;
 
 import com.github.robertsawyer.CulturalChronicles.domain.model.Author;
 import com.github.robertsawyer.CulturalChronicles.domain.repositories.AuthorReepository;
+import com.github.robertsawyer.CulturalChronicles.dto.AddAuthorDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Set;
 
@@ -29,5 +31,11 @@ public class AuthorService {
         } catch (RuntimeException re) {
             return false;
         }
+    }
+
+    @Transactional
+    public void createNewAuthor(AddAuthorDTO addAuthorDTO) {
+        Author author = Converters.convertToNewAuthor(addAuthorDTO);
+        authorReepository.save(author);
     }
 }

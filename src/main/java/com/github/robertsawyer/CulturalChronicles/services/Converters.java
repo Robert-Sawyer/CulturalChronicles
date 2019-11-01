@@ -1,8 +1,10 @@
 package com.github.robertsawyer.CulturalChronicles.services;
 
+import com.github.robertsawyer.CulturalChronicles.domain.model.Author;
 import com.github.robertsawyer.CulturalChronicles.domain.model.Book;
 import com.github.robertsawyer.CulturalChronicles.domain.model.Game;
 import com.github.robertsawyer.CulturalChronicles.domain.model.Movie;
+import com.github.robertsawyer.CulturalChronicles.dto.AddAuthorDTO;
 import com.github.robertsawyer.CulturalChronicles.dto.AddBookDTO;
 import com.github.robertsawyer.CulturalChronicles.dto.AddGameDTO;
 import com.github.robertsawyer.CulturalChronicles.dto.AddMovieDTO;
@@ -41,5 +43,13 @@ public class Converters {
         game.setTitle(addGameDTO.getTitle());
         game.setGenre(addGameDTO.getGenre());
         return game;
+    }
+
+    public static Author convertToNewAuthor(AddAuthorDTO addAuthorDTO) {
+        Author author = new Author();
+        author.setName(addAuthorDTO.getName());
+        author.setBirthDate(addAuthorDTO.getBirthDate());
+        author.setDeathDate(addAuthorDTO.getDeathDate());
+        return author;
     }
 }
