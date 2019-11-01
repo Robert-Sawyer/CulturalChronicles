@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -28,10 +27,10 @@ public class Author {
     private Set<Book> books = new HashSet<Book>();
 
     @Column
-    private Date birthYear;
+    private Date birthDate;
 
     @Column
-    private Date deathYera;
+    private Date deathDate;
 
 
     public Long getId() {
@@ -58,19 +57,19 @@ public class Author {
         this.books = books;
     }
 
-    public Date getBirthYear() {
-        return birthYear;
+    public Date getBirthDate() {
+        return birthDate;
     }
 
-    public void setBirthYear(Date birthYear) {
-        this.birthYear = birthYear;
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
     }
 
-    public Date getDeathYera() {
-        return deathYera;
+    public Date getDeathDate() {
+        return deathDate;
     }
 
-    public void setDeathYera(Date deathYera) {
-        this.deathYera = deathYera;
+    public void setDeathDate(Date deathDate) {
+        this.deathDate = deathDate;
     }
 }
