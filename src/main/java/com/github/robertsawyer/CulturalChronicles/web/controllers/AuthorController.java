@@ -1,6 +1,8 @@
 package com.github.robertsawyer.CulturalChronicles.web.controllers;
 
+import com.github.robertsawyer.CulturalChronicles.domain.model.Author;
 import com.github.robertsawyer.CulturalChronicles.dto.AddAuthorDTO;
+import com.github.robertsawyer.CulturalChronicles.dto.FindAuthorDTO;
 import com.github.robertsawyer.CulturalChronicles.services.AuthorService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,6 +45,18 @@ public class AuthorController {
         logger.info("Zapisuję nowego autora do bazy.");
         authorService.createNewAuthor(addAuthorDTO);
         return "redirect:/dashboard";
+    }
+
+    @GetMapping("/listAllAuthors")
+    public String showAuthorsList(Model model) {
+        model.addAttribute("authorName", new FindAuthorDTO());
+        model.addAttribute("authors", authorService.getAllAuthors());
+        return "authors/listAllAuthors";
+    }
+
+    @PostMapping(value = "/listAllAuthors", params = "search")
+    public Author findAuthor(@ModelAttribute("authorName") FindAuthorDTO authorName) {
+        return authorService.findByName(authorName);
     }
 
 }

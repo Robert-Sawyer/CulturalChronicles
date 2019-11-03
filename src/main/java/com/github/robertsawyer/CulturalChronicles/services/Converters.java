@@ -4,10 +4,7 @@ import com.github.robertsawyer.CulturalChronicles.domain.model.Author;
 import com.github.robertsawyer.CulturalChronicles.domain.model.Book;
 import com.github.robertsawyer.CulturalChronicles.domain.model.Game;
 import com.github.robertsawyer.CulturalChronicles.domain.model.Movie;
-import com.github.robertsawyer.CulturalChronicles.dto.AddAuthorDTO;
-import com.github.robertsawyer.CulturalChronicles.dto.AddBookDTO;
-import com.github.robertsawyer.CulturalChronicles.dto.AddGameDTO;
-import com.github.robertsawyer.CulturalChronicles.dto.AddMovieDTO;
+import com.github.robertsawyer.CulturalChronicles.dto.*;
 
 public class Converters {
 
@@ -50,6 +47,12 @@ public class Converters {
         author.setName(addAuthorDTO.getName());
         author.setBirthDate(addAuthorDTO.getBirthDate());
         author.setDeathDate(addAuthorDTO.getDeathDate());
+        return author;
+    }
+
+    public static Author convertFindAuthorDTOtoAuthor(FindAuthorDTO authorName) {
+        Author author = new Author();
+        author.setName(authorName.getName());
         return author;
     }
 }
