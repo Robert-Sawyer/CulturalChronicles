@@ -55,4 +55,10 @@ public class Converters {
         author.setName(authorName.getName());
         return author;
     }
+
+    public static Book convertFindBookDTOtoBook(FindBookDTO bookTitle) {
+        Book book = new Book();
+        book.setTitle(bookTitle.getTitle());
+        return book;
+    }
 }

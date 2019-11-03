@@ -1,6 +1,8 @@
 package com.github.robertsawyer.CulturalChronicles.web.controllers;
 
+import com.github.robertsawyer.CulturalChronicles.domain.model.Book;
 import com.github.robertsawyer.CulturalChronicles.dto.AddBookDTO;
+import com.github.robertsawyer.CulturalChronicles.dto.FindBookDTO;
 import com.github.robertsawyer.CulturalChronicles.services.AuthorService;
 import com.github.robertsawyer.CulturalChronicles.services.BookService;
 import org.slf4j.Logger;
@@ -52,6 +54,18 @@ public class BookController {
 
         bookService.createNewBook(addBookDTO);
         return "redirect:/dashboard";
+    }
+
+    @GetMapping("/listAllBooks")
+    public String showBooksList(Model model) {
+        model.addAttribute("bookTitle", new FindBookDTO());
+        model.addAttribute("books", bookService.getAllBooks());
+        return "books/listAllBooks";
+    }
+
+    @PostMapping(value = "/listAllBooks", params = "search")
+    public Book findBook(@ModelAttribute("bookTitle") FindBookDTO bookTitle) {
+        return bookService.findByName(bookTitle);
     }
 
     private boolean checkIfAuthorExists(AddBookDTO addBookDTO) {
