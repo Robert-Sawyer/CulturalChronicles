@@ -42,6 +42,10 @@ public class MovieController {
         if (bindingResult.hasErrors()){
             return "movies/addMovie";
         }
+        if (!checkIfGenreExists(addMovieDTO)) {
+            bindingResult.rejectValue("genre", null, "Taki gatunek nie istnieje. Wybierz gatunek z listy.");
+        }
+
         logger.info("Dodaję film do bazy.");
 
         movieService.createNewMovie(addMovieDTO);
@@ -60,5 +64,8 @@ public class MovieController {
         return movieService.findByName(movieTitle);
     }
 
+    private boolean checkIfGenreExists(AddMovieDTO addMovieDTO) {
+        return movieService.checkGenre(addMovieDTO.getGenre());
+    }
 
 }

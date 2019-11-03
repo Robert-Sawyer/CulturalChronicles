@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class MovieService {
@@ -30,5 +31,22 @@ public class MovieService {
     public Movie findByName(FindMovieDTO movieTitle) {
         Movie movie = Converters.convertFindMovieDTOtoMovie(movieTitle);
         return movieRepository.findByMovieTitle(movie);
+    }
+
+    public boolean checkGenre(Set<String> genres) {
+        if (genres.isEmpty()){
+            throw new IllegalArgumentException("Musisz wybrać gatunek.");
+        }
+        try {
+            for (String genre : genres) {
+                String newGenre = movieRepository.checkGenre(genre);
+                if (newGenre == null) {
+                    return false;
+                }
+            }
+            return true;
+        } catch (RuntimeException re) {
+            return false;
+        }
     }
 }
