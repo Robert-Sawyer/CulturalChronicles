@@ -1,6 +1,8 @@
 package com.github.robertsawyer.CulturalChronicles.web.controllers;
 
+import com.github.robertsawyer.CulturalChronicles.domain.model.Movie;
 import com.github.robertsawyer.CulturalChronicles.dto.AddMovieDTO;
+import com.github.robertsawyer.CulturalChronicles.dto.FindMovieDTO;
 import com.github.robertsawyer.CulturalChronicles.services.MovieService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,4 +47,18 @@ public class MovieController {
         movieService.createNewMovie(addMovieDTO);
         return "redirect:/dashboard"; //TODO zrobić inne przekierowanie
     }
+
+    @GetMapping("/listAllMovies")
+    public String showMoviesList(Model model) {
+        model.addAttribute("movieTitle", new FindMovieDTO());
+        model.addAttribute("movies", movieService.getAllMovies());
+        return "movies/listAllMovies";
+    }
+
+    @PostMapping(value = "/listAllMovies", params = "search")
+    public Movie findMovie(@ModelAttribute("movieTitle") FindMovieDTO movieTitle) {
+        return movieService.findByName(movieTitle);
+    }
+
+
 }

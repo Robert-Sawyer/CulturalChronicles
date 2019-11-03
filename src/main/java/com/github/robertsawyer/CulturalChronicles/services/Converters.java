@@ -61,4 +61,10 @@ public class Converters {
         book.setTitle(bookTitle.getTitle());
         return book;
     }
+
+    public static Movie convertFindMovieDTOtoMovie(FindMovieDTO movieTitle) {
+        Movie movie = new Movie();
+        movie.setTitle(movieTitle.getTitle());
+        return movie;
+    }
 }
