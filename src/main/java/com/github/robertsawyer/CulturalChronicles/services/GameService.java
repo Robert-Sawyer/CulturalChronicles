@@ -3,9 +3,12 @@ package com.github.robertsawyer.CulturalChronicles.services;
 import com.github.robertsawyer.CulturalChronicles.domain.model.Game;
 import com.github.robertsawyer.CulturalChronicles.domain.repositories.GameRepository;
 import com.github.robertsawyer.CulturalChronicles.dto.AddGameDTO;
+import com.github.robertsawyer.CulturalChronicles.dto.FindGameDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 public class GameService {
@@ -17,5 +20,15 @@ public class GameService {
     public void createNewGame(AddGameDTO addGameDTO) {
         Game game = Converters.convertToNewGame(addGameDTO);
         gameRepository.save(game);
+    }
+
+    public List<Game> getAllGames() {
+        List<Game> games = gameRepository.findAll();
+        return games;
+    }
+
+    public Game findByName(FindGameDTO gameTitle) {
+        Game game = Converters.convertFindGameDTOToGame(gameTitle);
+        return gameRepository.findByGameTitle(game);
     }
 }

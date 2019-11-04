@@ -1,6 +1,8 @@
 package com.github.robertsawyer.CulturalChronicles.web.controllers;
 
+import com.github.robertsawyer.CulturalChronicles.domain.model.Game;
 import com.github.robertsawyer.CulturalChronicles.dto.AddGameDTO;
+import com.github.robertsawyer.CulturalChronicles.dto.FindGameDTO;
 import com.github.robertsawyer.CulturalChronicles.services.GameService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -46,4 +48,17 @@ public class GameController {
         gameService.createNewGame(addGameDTO);
         return "redirect:/dashboard";
     }
+
+    @GetMapping("/listAllGames")
+    public String showGamesList(Model model) {
+        model.addAttribute("gameTitle", new FindGameDTO());
+        model.addAttribute("games", gameService.getAllGames());
+        return "games/listAllGames";
+    }
+
+    @PostMapping(value = "listAllGames", params = "search")
+    public Game findGame(@ModelAttribute("games") FindGameDTO gameTitle) {
+        return gameService.findByName(gameTitle);
+    }
+    
 }
