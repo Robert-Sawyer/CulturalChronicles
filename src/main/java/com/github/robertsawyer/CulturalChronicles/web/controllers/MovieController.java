@@ -37,7 +37,7 @@ public class MovieController {
     }
 
     @PostMapping("/add")
-    public String addNewMovie(@Valid @ModelAttribute("movie") AddMovieDTO addMovieDTO, BindingResult bindingResult) {
+    public String addNewMovie(@Valid @ModelAttribute("newMovie") AddMovieDTO addMovieDTO, BindingResult bindingResult) {
 
         if (bindingResult.hasErrors()){
             return "movies/addMovie";

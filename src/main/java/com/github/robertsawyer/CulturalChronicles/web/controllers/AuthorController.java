@@ -37,7 +37,7 @@ public class AuthorController {
     }
 
     @PostMapping("/add")
-    public String addNewAuthor(@Valid @ModelAttribute("author") AddAuthorDTO addAuthorDTO, BindingResult result) {
+    public String addNewAuthor(@Valid @ModelAttribute("newAuthor") AddAuthorDTO addAuthorDTO, BindingResult result) {
         if (result.hasErrors()) {
             return "authors/addAuthor";
         }

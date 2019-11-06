@@ -37,7 +37,7 @@ public class GameController {
     }
 
     @PostMapping("/add")
-    public String addNewGame(@Valid @ModelAttribute("game") AddGameDTO addGameDTO, BindingResult result) {
+    public String addNewGame(@Valid @ModelAttribute("newGame") AddGameDTO addGameDTO, BindingResult result) {
 
         if (result.hasErrors()) {
             return "games/addGame";
@@ -60,5 +60,5 @@ public class GameController {
     public Game findGame(@ModelAttribute("games") FindGameDTO gameTitle) {
         return gameService.findByName(gameTitle);
     }
-    
+
 }
