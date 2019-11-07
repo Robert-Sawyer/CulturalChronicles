@@ -14,6 +14,7 @@ public class AddAuthorDTO {
     private String name;
     private Date birthDate;
     private String birthPlace;
+    private boolean isAlive;
     private Date deathDate;
     private String deathPlace;
 
@@ -55,5 +56,13 @@ public class AddAuthorDTO {
 
     public void setDeathPlace(String deathPlace) {
         this.deathPlace = deathPlace;
+    }
+
+    public boolean isAlive() {
+        return isAlive;
+    }
+
+    public void setAlive(boolean alive) {
+        isAlive = alive;
     }
 }
