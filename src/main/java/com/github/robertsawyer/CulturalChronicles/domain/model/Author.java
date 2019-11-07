@@ -30,8 +30,15 @@ public class Author {
     private Date birthDate;
 
     @Column
+    private String birthPlace;
+
+    private boolean isAlive;
+
+    @Column
     private Date deathDate;
 
+    @Column
+    private String deathPlace;
 
     public Long getId() {
         return id;
@@ -71,5 +78,21 @@ public class Author {
 
     public void setDeathDate(Date deathDate) {
         this.deathDate = deathDate;
+    }
+
+    public String getBirthPlace() {
+        return birthPlace;
+    }
+
+    public void setBirthPlace(String birthPlace) {
+        this.birthPlace = birthPlace;
+    }
+
+    public String getDeathPlace() {
+        return deathPlace;
+    }
+
+    public void setDeathPlace(String deathPlace) {
+        this.deathPlace = deathPlace;
     }
 }
