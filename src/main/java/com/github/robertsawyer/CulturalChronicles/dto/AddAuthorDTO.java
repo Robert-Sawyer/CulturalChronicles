@@ -13,7 +13,9 @@ public class AddAuthorDTO {
     @NotNull
     private String name;
     private Date birthDate;
+    private String birthPlace;
     private Date deathDate;
+    private String deathPlace;
 
     public String getName() {
         return name;
@@ -37,5 +39,21 @@ public class AddAuthorDTO {
 
     public void setDeathDate(Date deathDate) {
         this.deathDate = deathDate;
+    }
+
+    public String getBirthPlace() {
+        return birthPlace;
+    }
+
+    public void setBirthPlace(String birthPlace) {
+        this.birthPlace = birthPlace;
+    }
+
+    public String getDeathPlace() {
+        return deathPlace;
+    }
+
+    public void setDeathPlace(String deathPlace) {
+        this.deathPlace = deathPlace;
     }
 }
