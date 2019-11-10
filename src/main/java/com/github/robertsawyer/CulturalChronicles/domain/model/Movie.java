@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -58,6 +59,8 @@ public class Movie {
 
     @Column
     private FilmStudio filmStudio;
+
+    private Date dateOfWatching;
 
     //TODO dodać resztę członków ekipy (montażysta, operator itp.)
 
@@ -163,5 +166,13 @@ public class Movie {
 
     public void setFilmStudio(FilmStudio filmStudio) {
         this.filmStudio = filmStudio;
+    }
+
+    public Date getDateOfWatching() {
+        return dateOfWatching;
+    }
+
+    public void setDateOfWatching(Date dateOfWatching) {
+        this.dateOfWatching = dateOfWatching;
     }
 }
