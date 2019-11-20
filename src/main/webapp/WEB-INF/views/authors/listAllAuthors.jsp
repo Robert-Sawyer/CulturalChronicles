@@ -1,5 +1,7 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Lista autorów</title>
@@ -11,6 +13,26 @@
 
 </head>
 <body>
+<jsp:include page="../home/header.jsp"></jsp:include>
+<div class="pageContainer">
+    <div class="authorsList">
+        <ul>
+            <c:forEach items="${authors}" var="author">
+                <li>
+                    <table>
+                        <tr>
+                            <td>${author.name}</td>
+                            <td>${author.books}</td>
+                            <td>${author.birthDate}</td>
+                            <td>${author.deathDate}</td>
+                        </tr>
+                    </table>
+                </li>
+            </c:forEach>
+        </ul>
+    </div>
+</div>
+<jsp:include page="../home/footer.jsp"></jsp:include>
 
 </body>
 </html>
