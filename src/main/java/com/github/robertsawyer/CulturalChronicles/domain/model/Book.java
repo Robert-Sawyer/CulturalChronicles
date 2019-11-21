@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -42,7 +43,7 @@ public class Book {
     @ElementCollection(targetClass=String.class)
     private Set<String> genre = new HashSet<String>();
 
-
+    private Date dateOfReading;
 
     public Long getId() {
         return id;
@@ -115,5 +116,13 @@ public class Book {
     @Override
     public int hashCode() {
         return Objects.hash(id, title, authors, pages, yearOfPublish);
+    }
+
+    public Date getDateOfReading() {
+        return dateOfReading;
+    }
+
+    public void setDateOfReading(Date dateOfReading) {
+        this.dateOfReading = dateOfReading;
     }
 }
