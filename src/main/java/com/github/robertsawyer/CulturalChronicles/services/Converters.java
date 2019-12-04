@@ -50,24 +50,6 @@ public class Converters {
         return author;
     }
 
-    public static Author convertFindAuthorDTOtoAuthor(FindAuthorDTO authorName) {
-        Author author = new Author();
-        author.setName(authorName.getName());
-        return author;
-    }
-
-    public static Book convertFindBookDTOtoBook(FindBookDTO bookTitle) {
-        Book book = new Book();
-        book.setTitle(bookTitle.getTitle());
-        return book;
-    }
-
-    public static Movie convertFindMovieDTOtoMovie(FindMovieDTO movieTitle) {
-        Movie movie = new Movie();
-        movie.setTitle(movieTitle.getTitle());
-        return movie;
-    }
-
     public static Game convertFindGameDTOToGame(FindGameDTO gameTitle) {
         Game game = new Game();
         game.setTitle(gameTitle.getTitle());
