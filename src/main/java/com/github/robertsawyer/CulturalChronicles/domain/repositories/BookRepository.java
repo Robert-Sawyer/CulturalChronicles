@@ -10,5 +10,5 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
     @Query(value = "SELECT * FROM books WHERE title = ?",
     nativeQuery = true)
-    Book findByBookTitle(Book book);
+    Book findByBookTitle(String title);
 }

@@ -64,8 +64,8 @@ public class BookController {
     }
 
     @PostMapping(value = "/listAllBooks", params = "search")
-    public Book findBook(@ModelAttribute("bookTitle") FindBookDTO bookTitle) {
-        return bookService.findByName(bookTitle);
+    public Book findBook(@ModelAttribute("bookTitle") FindBookDTO findBook) {
+        return bookService.findByName(findBook);
     }
 
     private boolean checkIfAuthorExists(AddBookDTO addBookDTO) {
