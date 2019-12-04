@@ -10,6 +10,6 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
 
     @Query(value = "SELECT * FROM movies WHERE title = ?",
     nativeQuery = true)
-    Movie findByMovieTitle(Movie movie);
+    Movie findByMovieTitle(String title);
 
 }

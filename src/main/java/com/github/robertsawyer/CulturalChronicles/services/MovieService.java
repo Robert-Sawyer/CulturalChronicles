@@ -29,8 +29,8 @@ public class MovieService {
     }
 
     public Movie findByName(FindMovieDTO movieTitle) {
-        Movie movie = Converters.convertFindMovieDTOtoMovie(movieTitle);
-        return movieRepository.findByMovieTitle(movie);
+//        Movie movie = Converters.convertFindMovieDTOtoMovie(movieTitle);
+        return movieRepository.findByMovieTitle(movieTitle.getTitle());
     }
 
     public boolean checkGenre(Set<String> genres) {
