@@ -50,9 +50,4 @@ public class Converters {
         return author;
     }
 
-    public static Game convertFindGameDTOToGame(FindGameDTO gameTitle) {
-        Game game = new Game();
-        game.setTitle(gameTitle.getTitle());
-        return game;
-    }
 }
