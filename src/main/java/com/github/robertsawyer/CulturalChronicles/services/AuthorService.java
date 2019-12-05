@@ -47,7 +47,6 @@ public class AuthorService {
     }
 
     public Author findByName(FindAuthorDTO authorName) {
-//        Author author = Converters.convertFindAuthorDTOtoAuthor(authorName);
         return authorRepository.findByAuthorName(authorName.getName());
     }
 

@@ -28,7 +28,6 @@ public class BookService {
     }
 
     public Book findByName(FindBookDTO findBook) {
-//        Book book = Converters.convertFindBookDTOtoBook(bookTitle);
         return bookRepository.findByBookTitle(findBook.getTitle());
     }
 }

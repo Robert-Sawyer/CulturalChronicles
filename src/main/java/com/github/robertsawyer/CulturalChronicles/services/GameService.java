@@ -28,7 +28,6 @@ public class GameService {
     }
 
     public Game findByName(FindGameDTO gameTitle) {
-        Game game = Converters.convertFindGameDTOToGame(gameTitle);
-        return gameRepository.findByGameTitle(game);
+        return gameRepository.findByGameTitle(gameTitle.getTitle());
     }
 }
