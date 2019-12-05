@@ -9,5 +9,5 @@ public interface GameRepository extends JpaRepository<Game, Long> {
 
     @Query(value = "SELECT * FROM games WHERE title = ?",
     nativeQuery = true)
-    Game findByGameTitle(Game game);
+    Game findByGameTitle(String title);
 }
