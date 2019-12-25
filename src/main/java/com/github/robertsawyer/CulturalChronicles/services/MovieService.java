@@ -3,6 +3,7 @@ package com.github.robertsawyer.CulturalChronicles.services;
 import com.github.robertsawyer.CulturalChronicles.domain.model.Movie;
 import com.github.robertsawyer.CulturalChronicles.domain.repositories.MovieRepository;
 import com.github.robertsawyer.CulturalChronicles.dto.AddMovieDTO;
+import com.github.robertsawyer.CulturalChronicles.dto.EditMovieDTO;
 import com.github.robertsawyer.CulturalChronicles.dto.FindMovieDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -47,5 +48,12 @@ public class MovieService {
         } catch (RuntimeException re) {
             return false;
         }
+    }
+
+    public void editMovie(EditMovieDTO editMovieDTO){
+        Movie movie = movieRepository.findById(editMovieDTO.getMovieId()).get();
+        movie.setDuration(editMovieDTO.getDuration());
+        movie.setGenre(editMovieDTO.getGenre());
+        movieRepository.save(movie);
     }
 }
