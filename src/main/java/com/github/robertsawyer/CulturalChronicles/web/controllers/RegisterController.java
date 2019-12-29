@@ -31,26 +31,27 @@ public class RegisterController {
 
     @GetMapping
     public String prepareRegistrationForm(Model model) {
+        model.addAttribute("register", new RegisterDTO());
         return "home/register";
     }
 
     @PostMapping
-    public String processRegistration(@Valid @ModelAttribute("registrationForm") RegisterDTO form, BindingResult result) {
+    public String processRegistration(@Valid @ModelAttribute("register") RegisterDTO form, BindingResult result) {
         if (result.hasErrors()) {
-            return "registration-page";
+            return "home/register";
         }
         if (!checkPasswordEquality(form)) {
             result.rejectValue("password", null, "Hasło i powtórzone hasło niezgodne");
-            return "registration-page";
+            return "home/registrer";
         }
         if (!checkIsUsernameIsAvailable(form)) {
             result.rejectValue("login", null, "Nazwa użytkownika już zajęta");
-            return "registration-page";
+            return "home/register";
         }
         logger.info("Rejestruję nowego użytkownika.");
         //Konwersja rfDTO na user encja i wywołąnie userrepositiry.save(...);
         userService.registerUser(form);
-        return "redirect:/index.html";
+        return "redirect:/home/home";
     }
 
     private boolean checkIsUsernameIsAvailable(RegisterDTO form) {
