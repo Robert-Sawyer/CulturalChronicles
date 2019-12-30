@@ -31,7 +31,7 @@
         </div>
         <div class="formContainer">
 
-            <form:form modelAttribute="registrationForm" method="post">
+            <form:form modelAttribute="register" method="post">
                 <form:errors path="*"/><br>
                 Login: <form:input path="login"/><br>
                 E-mail: <form:input path="email"/><br>
