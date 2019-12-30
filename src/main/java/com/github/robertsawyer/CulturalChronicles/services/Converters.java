@@ -1,9 +1,6 @@
 package com.github.robertsawyer.CulturalChronicles.services;
 
-import com.github.robertsawyer.CulturalChronicles.domain.model.Author;
-import com.github.robertsawyer.CulturalChronicles.domain.model.Book;
-import com.github.robertsawyer.CulturalChronicles.domain.model.Game;
-import com.github.robertsawyer.CulturalChronicles.domain.model.Movie;
+import com.github.robertsawyer.CulturalChronicles.domain.model.*;
 import com.github.robertsawyer.CulturalChronicles.dto.*;
 
 public class Converters {
@@ -50,4 +47,17 @@ public class Converters {
         return author;
     }
 
+    public static User convertToUser(RegisterDTO form) {
+        User user = new User();
+        user.setLogin(form.getLogin());
+        user.setEmail(form.getEmail());
+        user.setPassword(form.getPassword());
+        return user;
+    }
+
+    public static UserDTO convertToUserDTO(User user) {
+        UserDTO userDTO = new UserDTO();
+        userDTO.setLogin(user.getLogin());
+        return userDTO;
+    }
 }
