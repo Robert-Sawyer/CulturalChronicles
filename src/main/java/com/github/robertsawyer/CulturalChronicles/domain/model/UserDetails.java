@@ -1,15 +1,34 @@
 package com.github.robertsawyer.CulturalChronicles.domain.model;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table(name = "user_details")
 public class UserDetails {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     private Long id;
+
+    @Column
     private String firstName;
+
+    @Column
     private String lastName;
+
+    @Enumerated(EnumType.STRING)
+    @Column
     private Gender gender;
+
+    @Column
     private Date birthDate;
+
+    @Column
     private String city;
+
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "userDetails")
+    private User user;
 
     public UserDetails() {
     }
