@@ -24,7 +24,7 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 <div class="pageContainer">
-    <div class="page-content">
+    <div class="pageContent">
         <div class="registerPageTitle">
             <h2>LOGOWANIE</h2>
         </div>

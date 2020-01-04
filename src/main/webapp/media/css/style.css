@@ -2,14 +2,14 @@
 
 /*---HEADER---*/
 
-.page-header {
+.pageHeader {
     background-color: black;
     position: absolute;
-    left: 0px;
-    margin-left: 0px;
+    left: 0;
+    margin-left: 0;
     width: 100%;
     min-width: 980px;
-    top: 0px;
+    top: 0;
     height: 130px;
 }
 
@@ -199,9 +199,9 @@
 /*---PAGE CONTENT---*/
 
 .pageContainer {
-    left: 0px;
+    left: 0;
     background-color: red;
-    margin-left: 0px;
+    margin-left: 0;
     width: 100%;
     min-width: 980px;
     position: absolute;
@@ -209,7 +209,7 @@
     height: 100%;
 }
 
-.page-content{
+.pageContent{
     background-color: black;
     align-content: center;
     margin-left: 17%;

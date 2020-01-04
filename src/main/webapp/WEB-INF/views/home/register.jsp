@@ -22,27 +22,35 @@
 
 </head>
 <body>
-<jsp:include page="header.jsp"></jsp:include>
-
 <div class="pageContainer">
-    <div class="page-content">
+
+    <div class="pageHeader">
+        <jsp:include page="header.jsp"/>
+    </div>
+
+    <div class="pageContent">
         <div class="registerPageTitle">
             <h2>REJESTRACJA</h2>
-        </div>
-        <div class="formContainer">
 
-            <form:form modelAttribute="register" method="post">
-                <form:errors path="*"/><br>
-                Login: <form:input path="login"/><br>
-                E-mail: <form:input path="email"/><br>
-                Hasło: <form:password path="password"/><br>
-                Powtórz hasło: <form:password path="confirmPassword"/><br>
-                <input type="submit" class="btn btn-danger" value="Zarejestruj"/>
+            <div class="formContainer">
 
-            </form:form>
+                <form:form modelAttribute="register" method="post">
+                    <form:errors path="*"/><br>
+                    Login: <form:input path="login"/><br>
+                    E-mail: <form:input path="email"/><br>
+                    Hasło: <form:password path="password"/><br>
+                    Powtórz hasło: <form:password path="confirmPassword"/><br>
+                    <input type="submit" class="btn btn-danger" value="Zarejestruj"/>
+
+                </form:form>
+            </div>
         </div>
     </div>
+
+    <div class="pageFooter">
+        <jsp:include page="footer.jsp"/>
+    </div>
+
 </div>
-<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
