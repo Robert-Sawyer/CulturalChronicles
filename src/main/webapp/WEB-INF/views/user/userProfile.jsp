@@ -25,25 +25,25 @@
 
     <div class="pageContent">
 
-        <div class="username-container"></div>
+        <div class="usernameContainer"></div>
 
-        <div class="personal-user-menu"></div>
+        <div class="personalUserMenu"></div>
 
-        <div class="main-page-container">
-            <div class="left-side-panel">
+        <div class="mainPageContainer">
+            <div class="leftSidePanel">
 
-                <div class="profile-avatar"> </div>
+                <div class="profileAvatar"> </div>
 
-                <div class="since-when"></div>
+                <div id="sinceWhen"></div>
 
                 <div class="friends"></div>
 
             </div>
 
-            <div class="last-rated"></div>
+            <div id="lastRated"></div>
 
-            <div class="highest-rates"></div>
-            
+            <div id="highestRates"></div>
+
         </div>
     </div>
 
