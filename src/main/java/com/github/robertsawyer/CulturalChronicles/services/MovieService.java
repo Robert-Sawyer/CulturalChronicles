@@ -56,4 +56,9 @@ public class MovieService {
         movie.setGenre(editMovieDTO.getGenre());
         movieRepository.save(movie);
     }
+
+    @Transactional
+    public void deleteMovie(Long movieId) {
+        movieRepository.deleteById(movieId);
+    }
 }
