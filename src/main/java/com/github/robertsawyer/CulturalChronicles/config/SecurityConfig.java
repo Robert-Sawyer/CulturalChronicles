@@ -2,6 +2,7 @@ package com.github.robertsawyer.CulturalChronicles.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -48,6 +49,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/register").permitAll()
                 .antMatchers("/login").anonymous()
                 .antMatchers("/user", "/user/**").hasRole("USER")
+                .antMatchers(HttpMethod.GET).hasAnyRole("USER", "ADMIN")
+                .antMatchers(HttpMethod.POST).hasRole("ADMIN")
+                .antMatchers(HttpMethod.DELETE).hasRole("ADMIN")
                 .antMatchers("/admin", "/admin**").hasRole("ADMIN")
         //tutaj będą kolejne punkty dostępu do podstron
                 .anyRequest().authenticated()
