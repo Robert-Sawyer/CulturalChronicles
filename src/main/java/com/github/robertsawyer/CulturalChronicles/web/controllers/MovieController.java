@@ -14,8 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-@Controller
-@RequestMapping("/movies")
+@RestController
 public class MovieController {
 
     public static final Logger logger = LoggerFactory.getLogger(MovieController.class);
@@ -27,13 +26,13 @@ public class MovieController {
         this.movieService = movieService;
     }
 
-    @GetMapping("/add")
+    @GetMapping("/movies/add")
     public String prepareAddNewMovieForm(Model model) {
         model.addAttribute("newMovie", new AddMovieDTO());
         return "movies/addMovie";
     }
 
-    @PostMapping("/add")
+    @PostMapping("/movies/add")
     public String addNewMovie(@Valid @ModelAttribute("newMovie") AddMovieDTO addMovieDTO, BindingResult bindingResult) {
 
         if (bindingResult.hasErrors()){
@@ -49,19 +48,19 @@ public class MovieController {
         return "redirect:/dashboard"; //TODO zrobić inne przekierowanie
     }
 
-    @GetMapping("/listAllMovies")
+    @GetMapping("/movies/listAllMovies")
     public String showMoviesList(Model model) {
         model.addAttribute("movieTitle", new FindMovieDTO());
         model.addAttribute("movies", movieService.getAllMovies());
         return "movies/listAllMovies";
     }
 
-    @PostMapping(value = "/listAllMovies", params = "search")
+    @PostMapping(value = "/movies/listAllMovies", params = "search")
     public Movie findMovie(@ModelAttribute("movieTitle") FindMovieDTO movieTitle) {
         return movieService.findByName(movieTitle);
     }
 
-    @DeleteMapping(value = "/{movieId}")
+    @DeleteMapping(value = "/movies/{movieId}")
     public void deleteMovie(Long movieId) {
         movieService.deleteMovie(movieId);
     }
